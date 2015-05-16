@@ -1,0 +1,21 @@
+<h1>This is index test page</h1>
+
+<table border="1" style="width:100%">
+<tr>
+	<% @csv_object_now[0].each do |s| %>
+		<th><%= s %></th>
+	<% end %>
+</tr>
+
+<% row_index = 0 %>
+<% @csv_object_now.each do |row| %>
+	<tr>
+		<% row.each do |c| %>
+			<td><%= c %></td>
+		<% end %>
+		<td><%= button_to 'edit',  courses_editStudentRecord_path(:row => row_index) %></td>
+	</tr>
+	<% row_index = row_index + 1 %>
+<% end %>
+
+<%= @@f_name %>

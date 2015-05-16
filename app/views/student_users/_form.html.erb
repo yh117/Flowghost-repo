@@ -1,0 +1,39 @@
+<%= form_for @student_user do |f| %>
+  <% if @student_user.errors.any? %>
+    <div class="alert alert-danger">
+      <h3><%= pluralize(@student_user.errors.count, "error") %> prohibited this user from being saved:</h3>
+      <ul>
+	<% @student_user.errors.full_messages.each do |msg| %>
+	  <li><%= msg %></li>
+	<% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :user_attributes do |ff| %> <!-- IMPORTANT!!!!! users instead of user -->
+    <div>
+      <div class="form-group">
+       <%= ff.text_field :name,{:class=>"form-control",:placeholder=>"Name"}  %>
+      </div>
+
+     <div class="form-group">
+      <%= ff.text_field :email,{:class=>"form-control",:placeholder=>"Email"}  %>
+     </div>
+
+     <div class="form-group">
+      <%= ff.password_field :password,{:class=>"form-control",:placeholder=>"Password"}  %>
+     </div>
+
+     <div class="form-group">
+      <%= ff.password_field :password_confirmation,{:class=>"form-control",:placeholder=>"Confirm"}  %>
+     </div>
+
+   </div>
+  <% end %>
+
+<div class="form-group">                                                                                                     
+  <%= f.submit "Submit" ,:class=>"btn btn-primary"%>                                                                              
+</div>   
+
+<% end %>
+

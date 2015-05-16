@@ -1,0 +1,270 @@
+<!-- FORM FOR ENTERING MULTIPLE NEW STUDENT INFO -->
+
+<% if flash[:notice] %>
+	<div class="alert alert-danger">
+		<%=flash[:notice]%>
+	</div>
+<% end %>
+
+
+<%= form_for @course do |f| %>
+
+	<!-- page for student input -->
+	<div class="form-page">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<table class="table table-striped table-hover">
+					<colgroup>
+						<col style="width:5%"/>
+						<col style="width:80%"/>
+						<col style="width:15%"/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="fg-centered">#</th>
+							<th class="fg-centered">Email</th>
+							<th class="fg-centered">Status</th>
+						</tr>
+					</thead>
+					<tbody id="form-students-table">
+						<tr>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<%= text_field_tag "course[students_attributes]", @course.students.to_json, {:class=>"form-control", :id=>"form-students-hidden"} %>
+		<center>
+			<input class="btn btn-primary fg-inline" type="submit" value="Submit" name="commit">
+			<button class="btn btn-primary fg-float-right" data-toggle="modal" data-target="#form-students-modal"><span class="glyphicon glyphicon-list"></span> Enter List</button>
+		</center>
+	</div>
+
+
+	<div id="form-students-modal" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<input class="close fg-delete" data-dismiss="modal" type="image" value="&#10006;"></input>
+					<h4 class="modal-title">Input line-separated email list</h4>
+				</div>
+				<div class="modal-body">
+					<textarea id="form-students-modal-input" class="form-control" rows="20"></textarea>
+				</div>
+				<div class="modal-footer">
+					<input id="fg-submit-student-modal" class="btn btn-primary" type="button" value="Submit" data-dismiss="modal">
+				</div>
+			</div>
+		</div>
+	</div>
+
+<% end %>
+
+
+<script>
+
+	numStudents = 0;
+	uniqueEmailJSONArray = [];
+
+	<!-- set classes for divs upon doc ready -->
+	<!-- also need to hide some elements on startup -->
+	$(document).ready(function() {
+		$(".form-page:gt(0)").hide();
+		autopopulate();
+	});
+
+	function autopopulate() {
+		var studentString = $("#form-students-hidden").val();
+		studentJSONArray = JSON.parse(studentString);
+		console.log("autopopulate for students form called!");
+		for (var i=0; i<studentJSONArray.length; i++) {
+			var currentStudent = studentJSONArray[i];
+			addStudentLine();
+			$("#form-students-table").children(":last").find(".fg-input").val(currentStudent.email)
+			.parent().prev().find(".fg-existing-id").html(currentStudent.id);
+		}
+		$(".fg-input").blur();
+		if (numStudents == 0) { addStudentLine(); }
+	}
+
+
+	<!-- function to move to prev page -->
+	$(".form-page").on("click", ".fg-button-prev", function() {
+		$(this).parent().parent().prev().show();
+		$(this).parent().parent().hide();
+		var htmlString = $("#pageNum").html();
+		$("#pageNum").html(parseInt(htmlString)-1);
+	});
+
+	<!-- function to move to next page -->
+	$(".form-page").on("click", ".fg-button-next", function() {
+		$(this).parent().parent().next().show();
+		$(this).parent().parent().hide();
+		var htmlString = $("#pageNum").html();
+		$("#pageNum").html(parseInt(htmlString)+1);
+	});
+
+	<!-- add our own submit handler to run before default handler -->
+	$("#new_course").on("submit", "", function() {
+		updateHiddenEmailField();
+	});
+
+
+	<!-- add a new line to student email form -->
+	function addStudentLine() {
+		numStudents += 1;
+		var $newStudentTr = $("<tr/>");
+			$("<td/>", {
+				html: numStudents.toString(),
+				"class": "fg-centered"
+				}).append($("<div/>", {
+					class: "fg-existing-id"
+				})).appendTo($newStudentTr);
+				var $studentEmailInput = $("<input>", {
+					"class": "form-control fg-input",
+					type: "text",
+					placeholder: "Email address"
+				});
+				var $studentEmailDisp = $("<div/>", {
+					"class": "fg-display"
+				});
+				var $studentDelete = $("<span/>", {
+					"class": "glyphicon glyphicon-remove fg-delete",
+					tabIndex: -1
+				});
+				var $studentEmailTd= $("<td/>", {
+					"class": "fg-vertical-middle"
+				});
+				(($studentEmailTd.append($studentEmailInput)).append($studentEmailDisp).append($studentDelete)); //TODO EXPERIMENTED WITH REMOVE STUDENT DELETE; DIDNT WORK
+				$studentEmailTd.appendTo($newStudentTr);
+				$("<td/>", {
+					"class": "fg-status-neutral",
+					html: "EMPTY"
+				}).appendTo($newStudentTr);
+				$newStudentTr.find(".fg-display, .fg-delete,  .fg-existing-id").hide(); //TODO EXPERIMENTED WITH  REMOVED FG-DELETE; DIDNT WORK
+				$("#form-students-table").append($newStudentTr);
+			}
+
+
+			<!-- function called to delete student line -->
+			<!-- deleteStudent -->
+			$("#form-students-table").on("click", ".fg-delete", function() {
+				var email = $(this).prev().html();
+				$(this).parent().parent().nextAll().children(":first-child").each(function() {
+					var htmlString = $(this).html();
+					$(this).html(parseInt(htmlString)-1);
+				});
+				$(this).parent().parent().remove();
+				uniqueEmailJSONArray.splice(uniqueEmailJSONArray.indexOf(email), 1);
+				numStudents--;
+			});
+
+			<!-- function called upon clicking on display to edit student -->
+			<!-- editStudent -->
+			$("#form-students-table").on("click", ".fg-display", function() {
+				$(this).hide()
+				.prev().attr("type", "text").end()
+				.next().hide().end();
+				$(this).prev().focus();
+			});
+
+
+			<!-- function called when student input blurs and loses focus -->
+			<!-- onStudentBlur -->
+			$("#form-students-table").on("blur", ".fg-input", function() {
+				var email = $(this).prop("value");
+				var oldEmail = $(this).parent().find(".fg-display").html();
+				var valid = (uniqueEmailJSONArray.indexOf(email) == -1);
+				valid = (valid && verifyEmail(email));
+				if (!valid) {
+					if (email.trim() == "" && $(this).parent().parent().index() != numStudents) {
+						$(this).parent().find(".fg-delete").click();
+						return;
+					}
+					if (email.trim() == "") {
+						$(this).parent().parent().find(":last").removeClass("fg-status-good").removeClass("fg-status-bad").addClass("fg-status-neutral").html("EMPTY");
+						} else {
+						$(this).parent().parent().find(":last").removeClass("fg-status-good").removeClass("fg-status-neutral").addClass("fg-status-bad").html("INVALID");
+					}
+					return;
+				}
+				$(this).attr("type", "hidden")
+				.next().html(email).show()
+				.next(":last").show()
+				.parent().parent().find(":last").removeClass("fg-status-neutral").removeClass("fg-status-bad").addClass("fg-status-good").html("OK");
+				if ($(this).parent().parent().index() == numStudents) {
+					addStudentLine();
+				}
+				$("#form-students-table").children().eq(numStudents).children().eq(1).find(".fg-input").focus();
+				if (oldEmail != "") {
+					uniqueEmailJSONArray.splice(uniqueEmailJSONArray.indexOf(oldEmail), 1);
+				}
+				uniqueEmailJSONArray.push(email);
+				updateHiddenEmailField();
+			});
+
+
+
+
+
+
+			<!-- check that email has valid form -->
+			function verifyEmail(email) {
+				email = email.trim();
+				var atpos = email.indexOf("@");
+				var dotpos = email.lastIndexOf(".");
+				if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+					return false;
+				}
+				return true;
+			}
+
+
+				<!-- update hidden email input field with table data -->
+				function updateHiddenEmailField() {
+					studentJSONArray = [];
+					$("#form-students-table").children(":gt(0)").each(function(index) {
+						var valid = ($(this).find(".fg-status-good").length == 1);
+						if (valid) {
+							var studentObject = {};
+							studentObject.email = $(this).find(".fg-display").html();
+							var existingId = $(this).find(".fg-existing-id").html();
+							if (existingId != "") {
+								studentObject.id = parseInt(existingId);
+							}
+							studentJSONArray.push(studentObject);
+						}
+					});
+					$("#form-students-hidden").prop("value", JSON.stringify(studentJSONArray));
+				}
+
+			<!-- parse email list in modal -->
+			$("#fg-submit-student-modal").on("click", function() {
+				var rawString = $("#form-students-modal-input").prop("value");
+				rawString = rawString.trim();
+				var regExp = new RegExp("\n", "g");
+				rawString = rawString.replace(regExp, ',');
+				var emailArray = rawString.split(',');
+				emailArray.forEach(function(element, index, array) {
+					var email = element.trim();
+					if (email.trim() == "") {
+						return;
+					}
+					$currentTd = $("#form-students-table").children(":last").children(":eq(1)");
+					$currentTd.children().eq(0).prop("value", email);
+					var valid = verifyEmail(email);
+					if (!valid) {
+						$currentTd.next().removeClass("fg-status-good").removeClass("fg-status-neutral").addClass("fg-status-bad").html("INVALID");
+						} else {
+						$currentTd.find(":first-child").attr("type", "hidden")
+						.next().html(email).show()
+						.next().attr("type", "image")
+						.parent().next().removeClass("fg-status-neutral").removeClass("fg-status-bad").addClass("fg-status-good").html("OK");
+					}
+					addStudentLine();
+				});
+				$("form-students-modal-input").prop("value", "");
+			});
+
+		</script>
+

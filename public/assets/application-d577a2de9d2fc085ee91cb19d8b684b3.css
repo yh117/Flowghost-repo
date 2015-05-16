@@ -1,0 +1,226 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css");
+.welcomeMSG {
+	margin:auto;
+}
+    body {
+padding: 30px;
+}
+
+.navbar {
+margin-bottom: 30px;
+}
+.fg-centered {
+  vertical-align: middle !important;
+  text-align: center; }
+
+.fg-vertical-middle {
+  vertical-align: middle !important; }
+
+.fg-delete {
+  vertical-align: middle !important;
+  float: right;
+  display: inline;
+  color: black; }
+
+.fg-inline {
+  display: inline; }
+
+.fg-bkgd-red {
+  background-color: red !important; }
+
+.fg-float-right {
+  float: right; }
+
+.fg-student-display {
+  display: inline;
+  vertical-align: middle !important; }
+
+.fg-status-good {
+  vertical-align: middle !important;
+  text-align: center;
+  background-color: lightgreen !important; }
+
+.fg-status-bad {
+  vertical-align: middle !important;
+  text-align: center;
+  background-color: red !important; }
+
+.fg-status-neutral {
+  vertical-align: middle !important;
+  text-align: center;
+  background-color: gray !important; }
+
+.fg-sidenav-header {
+  vertical-align: middle !important;
+  background-color: lightgray !important; }
+.ch-grid {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%; }
+
+.ch-grid:after,
+.ch-item:before {
+  content: '';
+  display: table; }
+
+.ch-grid:after {
+  clear: both; }
+
+.ch-grid li {
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  margin: 20px; }
+
+.ch-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+  box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out; }
+
+.ch-img-nc {
+  background-image: url(http://fds.duke.edu/photos/fac/u14677.jpg);
+  background-repeat: no-repeat; }
+
+.ch-img-cr {
+  background-image: url(http://www.dibs.duke.edu/uploads/assets/265/Roberts.headshot.DIBSWeb.jpg);
+  background-repeat: no-repeat; }
+
+.ch-img {
+  background-image: url(http://mirror.xmission.com/jenkins/art/jenkins-logo/headshot.svg);
+  background-repeat: no-repeat; }
+
+.ch-info {
+  position: absolute;
+  background: rgba(63, 147, 147, 0.8);
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: scale(0); }
+
+.ch-info h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin: 0 30px;
+  padding: 45px 0 0 0;
+  height: 110px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+.ch-info p {
+  color: #fff;
+  padding: 10px 5px;
+  font-style: italic;
+  margin: 0 30px;
+  font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: all 1s ease-in-out 0.4s; }
+
+.ch-info p a {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding-top: 4px;
+  font-family: 'Open Sans', Arial, sans-serif; }
+
+.ch-info p a:hover {
+  color: rgba(255, 242, 34, 0.8); }
+
+.ch-item:hover {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.ch-item:hover .ch-info {
+  transform: scale(1);
+  opacity: 1; }
+
+.ch-item:hover .ch-info p {
+  opacity: 1; }
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+  a:visited {
+    color: #666; }
+  a:hover {
+    color: #fff;
+    background-color: #000; }
+
+div.field, div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }

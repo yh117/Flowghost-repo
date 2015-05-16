@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	    <meta charset="utf-8">
+  <title>FlowGhost | <%= @pageTitle %></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+  <%= stylesheet_link_tag "application"%>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Define jquery first so rest of page can utilize -->
+    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<!-- Static navbar -->
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home/index">FlowGhost</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav">
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="/home/about">About</a></li>
+          </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+    <% if current_user.nil?%>
+    <li><%= link_to "Sign in",signin_url%></li>
+  <%else%>
+    <% if current_user[:identifiable_type]=='StudentUser' %>
+      <li><%=link_to "Profile", student_user_path(:id => current_user[:identifiable_id])%></li>
+     <% else %>
+       <li><%=link_to "Profile", instructor_user_path(:id => current_user[:identifiable_id])%></li>
+     <% end%>
+    <li><%= link_to "Sign out",signout_url%></li>
+    <%end%>
+</ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+</div>
+
+    <div class="container">
+
+<%= yield %>
+</div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

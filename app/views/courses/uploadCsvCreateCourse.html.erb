@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1 class="panel-title"><center>Create a new course</center></h1>
+	</div>
+	<div class="panel-body">
+		
+		<center>
+			<%= form_tag({:action => "storeUploadedFile"},:multipart => true, :method => "post") do %>
+			<!--%= file_field_tag "file" %-->
+			<%= file_field_tag "uploadFile" -%>
+			<br/>
+			<%= submit_tag "upload", :class=>"btn btn-primary fg-inline" %><br><br>
+			<% end %>
+			
+		</center>
+	</div>
+
+
+</div>

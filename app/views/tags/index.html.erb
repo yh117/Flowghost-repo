@@ -1,0 +1,28 @@
+<h1>Listing tags</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tags.each do |tag| %>
+
+      <tr>
+        <td><%= tag.name %></td>
+        <td><%= link_to 'Edit', {:controller => :tags, :action => 'edit', :id => tag.id, :course_id=> params[:course_id]}, :class=>"btn btn-lg btn-link" %></td>
+        <td><%= button_to "Destroy", {:controller => :tags, :action => 'destroy', :id => tag.id, :course_id => params[:course_id]}, :class=>"btn btn-danger" ,:method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "Add a tag", {:controller => :tags, :action => 'new', :course_id=> params[:course_id]}, :class=>"btn btn-lg btn-link" %>
+<%= link_to "Back to course page", course_path(:id=>params[:course_id]), {:class=>"btn btn-lg btn-link"} %>
+

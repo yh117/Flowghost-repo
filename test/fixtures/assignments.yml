@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  course_id: 1
+  points_possible: 1
+  node_id: 1
+
+two:
+  name: MyString
+  course_id: 1
+  points_possible: 1
+  node_id: 1

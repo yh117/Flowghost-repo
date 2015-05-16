@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to FlowGhost!</h1>
+    <p>
+      You can now view your grades for <%=@course.name%>:
+    </p>
+    <p>
+<%= link_to 'Grades', gradeview_url(:id=>@student.random_url) %>   
+ </p>
+  </body>
+</html>

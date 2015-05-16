@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>taffy.js - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../../index.html">Home</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../../../README_md.html">README</a>
+  
+    <li class="file"><a href="../../../README_rdoc.html">README</a>
+  
+    <li class="file"><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/assignments_js_coffee.html">assignments.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/courses_js_coffee.html">courses.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/flowcharts_js_coffee.html">flowcharts.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/grades_js_coffee.html">grades.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/home_js_coffee.html">home.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/sessions_js_coffee.html">sessions.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/students_js_coffee.html">students.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/taffy_js.html">taffy.js</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/users_js_coffee.html">users.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/javascripts/view_js_coffee.html">view.js.coffee</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/assignments_css_scss.html">assignments.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/courses_css_scss.html">courses.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/flowcharts_css_scss.html">flowcharts.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/grades_css_scss.html">grades.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/home_css_scss.html">home.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/scaffolds_css_scss.html">scaffolds.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/sessions_css_scss.html">sessions.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/students_css_scss.html">students.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/users_css_scss.html">users.css.scss</a>
+  
+    <li class="file"><a href="../../../app/assets/stylesheets/view_css_scss.html">view.css.scss</a>
+  
+    <li class="file"><a href="../../../app/views/users/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li class="file"><a href="../../../config_ru.html">config.ru</a>
+  
+    <li class="file"><a href="../../../db/sample-data/assignments_csv.html">assignments.csv</a>
+  
+    <li class="file"><a href="../../../db/sample-data/tag_assignments_csv.html">tag_assignments.csv</a>
+  
+    <li class="file"><a href="../../../db/sample-data/tags_csv.html">tags.csv</a>
+  
+    <li class="file"><a href="../../../doc/ActiveRecord_html.html">ActiveRecord.html</a>
+  
+    <li class="file"><a href="../../../doc/ActiveSupport_html.html">ActiveSupport.html</a>
+  
+    <li class="file"><a href="../../../doc/ActiveSupport/TestCase_html.html">TestCase.html</a>
+  
+    <li class="file"><a href="../../../doc/AddAssignmentIdToGrades_html.html">AddAssignmentIdToGrades.html</a>
+  
+    <li class="file"><a href="../../../doc/AddAssignmentsToCourses_html.html">AddAssignmentsToCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/AddGroupToAssignments_html.html">AddGroupToAssignments.html</a>
+  
+    <li class="file"><a href="../../../doc/AddGroupToCourses_html.html">AddGroupToCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/AddNodeIdToAssignments_html.html">AddNodeIdToAssignments.html</a>
+  
+    <li class="file"><a href="../../../doc/AddNodesLinksToCourses_html.html">AddNodesLinksToCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/AddPointsToAssignments_html.html">AddPointsToAssignments.html</a>
+  
+    <li class="file"><a href="../../../doc/AddTagsToAssignments_html.html">AddTagsToAssignments.html</a>
+  
+    <li class="file"><a href="../../../doc/AddUserIdToCourses_html.html">AddUserIdToCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/ApplicationController_html.html">ApplicationController.html</a>
+  
+    <li class="file"><a href="../../../doc/ApplicationHelper_html.html">ApplicationHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/Assignment_html.html">Assignment.html</a>
+  
+    <li class="file"><a href="../../../doc/AssignmentTest_html.html">AssignmentTest.html</a>
+  
+    <li class="file"><a href="../../../doc/AssignmentsController_html.html">AssignmentsController.html</a>
+  
+    <li class="file"><a href="../../../doc/AssignmentsControllerTest_html.html">AssignmentsControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/AssignmentsHelper_html.html">AssignmentsHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/AssignmentsHelperTest_html.html">AssignmentsHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/Course_html.html">Course.html</a>
+  
+    <li class="file"><a href="../../../doc/CourseTest_html.html">CourseTest.html</a>
+  
+    <li class="file"><a href="../../../doc/CoursesController_html.html">CoursesController.html</a>
+  
+    <li class="file"><a href="../../../doc/CoursesControllerTest_html.html">CoursesControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/CoursesHelper_html.html">CoursesHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/CoursesHelperTest_html.html">CoursesHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateAssignments_html.html">CreateAssignments.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateCourses_html.html">CreateCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateGrades_html.html">CreateGrades.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateLinks_html.html">CreateLinks.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateSessions_html.html">CreateSessions.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateStudents_html.html">CreateStudents.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateTags_html.html">CreateTags.html</a>
+  
+    <li class="file"><a href="../../../doc/CreateUsers_html.html">CreateUsers.html</a>
+  
+    <li class="file"><a href="../../../doc/FlowchartTest_html.html">FlowchartTest.html</a>
+  
+    <li class="file"><a href="../../../doc/FlowchartsControllerTest_html.html">FlowchartsControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/FlowchartsHelper_html.html">FlowchartsHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/FlowchartsHelperTest_html.html">FlowchartsHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/Flowghost_html.html">Flowghost.html</a>
+  
+    <li class="file"><a href="../../../doc/Flowghost/Application_html.html">Application.html</a>
+  
+    <li class="file"><a href="../../../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../../../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="../../../doc/Grade_html.html">Grade.html</a>
+  
+    <li class="file"><a href="../../../doc/GradeTest_html.html">GradeTest.html</a>
+  
+    <li class="file"><a href="../../../doc/GradesController_html.html">GradesController.html</a>
+  
+    <li class="file"><a href="../../../doc/GradesControllerTest_html.html">GradesControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/GradesHelper_html.html">GradesHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/GradesHelperTest_html.html">GradesHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/HomeController_html.html">HomeController.html</a>
+  
+    <li class="file"><a href="../../../doc/HomeControllerTest_html.html">HomeControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/HomeHelper_html.html">HomeHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/HomeHelperTest_html.html">HomeHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/Link_html.html">Link.html</a>
+  
+    <li class="file"><a href="../../../doc/LinkTest_html.html">LinkTest.html</a>
+  
+    <li class="file"><a href="../../../doc/Logger_html.html">Logger.html</a>
+  
+    <li class="file"><a href="../../../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../../../doc/README_rdoc_html.html">README_rdoc.html</a>
+  
+    <li class="file"><a href="../../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveAssignmentFromCourses_html.html">RemoveAssignmentFromCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveAssignmentNameFromGrades_html.html">RemoveAssignmentNameFromGrades.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveAssignmentsFromCourses_html.html">RemoveAssignmentsFromCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveGroupFromCourses_html.html">RemoveGroupFromCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveLinksFromCourses_html.html">RemoveLinksFromCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveNodeIdsFromAssignments_html.html">RemoveNodeIdsFromAssignments.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveNodesFromCourses_html.html">RemoveNodesFromCourses.html</a>
+  
+    <li class="file"><a href="../../../doc/RemoveTags_html.html">RemoveTags.html</a>
+  
+    <li class="file"><a href="../../../doc/RenameSourceIdToTarget_html.html">RenameSourceIdToTarget.html</a>
+  
+    <li class="file"><a href="../../../doc/RenameTargetIdToTarget_html.html">RenameTargetIdToTarget.html</a>
+  
+    <li class="file"><a href="../../../doc/Session_html.html">Session.html</a>
+  
+    <li class="file"><a href="../../../doc/SessionTest_html.html">SessionTest.html</a>
+  
+    <li class="file"><a href="../../../doc/SessionsController_html.html">SessionsController.html</a>
+  
+    <li class="file"><a href="../../../doc/SessionsControllerTest_html.html">SessionsControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/SessionsHelper_html.html">SessionsHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/SessionsHelperTest_html.html">SessionsHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/Student_html.html">Student.html</a>
+  
+    <li class="file"><a href="../../../doc/StudentMailer_html.html">StudentMailer.html</a>
+  
+    <li class="file"><a href="../../../doc/StudentMailerTest_html.html">StudentMailerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/StudentTest_html.html">StudentTest.html</a>
+  
+    <li class="file"><a href="../../../doc/StudentsController_html.html">StudentsController.html</a>
+  
+    <li class="file"><a href="../../../doc/StudentsControllerTest_html.html">StudentsControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/StudentsHelper_html.html">StudentsHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/StudentsHelperTest_html.html">StudentsHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/Tag_html.html">Tag.html</a>
+  
+    <li class="file"><a href="../../../doc/TagAssignment_html.html">TagAssignment.html</a>
+  
+    <li class="file"><a href="../../../doc/TagAssignmentTest_html.html">TagAssignmentTest.html</a>
+  
+    <li class="file"><a href="../../../doc/TagTest_html.html">TagTest.html</a>
+  
+    <li class="file"><a href="../../../doc/User_html.html">User.html</a>
+  
+    <li class="file"><a href="../../../doc/UserTest_html.html">UserTest.html</a>
+  
+    <li class="file"><a href="../../../doc/UsersController_html.html">UsersController.html</a>
+  
+    <li class="file"><a href="../../../doc/UsersControllerTest_html.html">UsersControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/UsersHelper_html.html">UsersHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/UsersHelperTest_html.html">UsersHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/ViewControllerTest_html.html">ViewControllerTest.html</a>
+  
+    <li class="file"><a href="../../../doc/ViewHelper_html.html">ViewHelper.html</a>
+  
+    <li class="file"><a href="../../../doc/ViewHelperTest_html.html">ViewHelperTest.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/application_js_html.html">application_js.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/assignments_js_coffee_html.html">assignments_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/courses_js_coffee_html.html">courses_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/flowcharts_js_coffee_html.html">flowcharts_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/grades_js_coffee_html.html">grades_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/home_js_coffee_html.html">home_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/sessions_js_coffee_html.html">sessions_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/students_js_coffee_html.html">students_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/taffy_js_html.html">taffy_js.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/users_js_coffee_html.html">users_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/javascripts/view_js_coffee_html.html">view_js_coffee.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/application_css_html.html">application_css.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/assignments_css_scss_html.html">assignments_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/courses_css_scss_html.html">courses_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/flowcharts_css_scss_html.html">flowcharts_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/grades_css_scss_html.html">grades_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/home_css_scss_html.html">home_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/scaffolds_css_scss_html.html">scaffolds_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/sessions_css_scss_html.html">sessions_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/students_css_scss_html.html">students_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/users_css_scss_html.html">users_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/assets/stylesheets/view_css_scss_html.html">view_css_scss.html</a>
+  
+    <li class="file"><a href="../../../doc/app/views/users/show_json_jbuilder_html.html">show_json_jbuilder.html</a>
+  
+    <li class="file"><a href="../../../doc/config_ru_html.html">config_ru.html</a>
+  
+    <li class="file"><a href="../../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../../doc/db/sample-data/assignments_csv_html.html">assignments_csv.html</a>
+  
+    <li class="file"><a href="../../../doc/db/sample-data/tag_assignments_csv_html.html">tag_assignments_csv.html</a>
+  
+    <li class="file"><a href="../../../doc/db/sample-data/tags_csv_html.html">tags_csv.html</a>
+  
+    <li class="file"><a href="../../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../../doc/lib/tasks/loader_rake_html.html">loader_rake.html</a>
+  
+    <li class="file"><a href="../../../doc/log/development_log_html.html">development_log.html</a>
+  
+    <li class="file"><a href="../../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../../lib/tasks/loader_rake.html">loader.rake</a>
+  
+    <li class="file"><a href="../../../log/development_log.html">development.log</a>
+  
+    <li class="file"><a href="../../../public/404_html.html">404.html</a>
+  
+    <li class="file"><a href="../../../public/422_html.html">422.html</a>
+  
+    <li class="file"><a href="../../../public/500_html.html">500.html</a>
+  
+    <li class="file"><a href="../../../public/assets/application-8b7088ec7a1a59ff2af2a9898942a817_js.html">application-8b7088ec7a1a59ff2af2a9898942a817.js</a>
+  
+    <li class="file"><a href="../../../public/assets/application-d577a2de9d2fc085ee91cb19d8b684b3_css.html">application-d577a2de9d2fc085ee91cb19d8b684b3.css</a>
+  
+    <li class="file"><a href="../../../public/assets/manifest-95a7d7a85a9808fdbcc3205d1f70b686_json.html">manifest-95a7d7a85a9808fdbcc3205d1f70b686.json</a>
+  
+    <li class="file"><a href="../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li class="file"><a href="../../../public/robots_txt.html">robots</a>
+  
+    <li class="file"><a href="../../../public/taffy_js.html">taffy.js</a>
+  
+    <li class="file"><a href="../../../vendor/assets/javascripts/taffy-min_js.html">taffy-min.js</a>
+  
+    <li class="file"><a href="../../../vendor/assets/javascripts/taffy_js.html">taffy.js</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="../../../ActiveSupport.html">ActiveSupport</a>
+  
+    <li><a href="../../../ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
+  
+    <li><a href="../../../AddAssignmentIdToGrades.html">AddAssignmentIdToGrades</a>
+  
+    <li><a href="../../../AddAssignmentsToCourses.html">AddAssignmentsToCourses</a>
+  
+    <li><a href="../../../AddGroupToAssignments.html">AddGroupToAssignments</a>
+  
+    <li><a href="../../../AddGroupToCourses.html">AddGroupToCourses</a>
+  
+    <li><a href="../../../AddNodeIdToAssignments.html">AddNodeIdToAssignments</a>
+  
+    <li><a href="../../../AddNodesLinksToCourses.html">AddNodesLinksToCourses</a>
+  
+    <li><a href="../../../AddPointsToAssignments.html">AddPointsToAssignments</a>
+  
+    <li><a href="../../../AddTagsToAssignments.html">AddTagsToAssignments</a>
+  
+    <li><a href="../../../AddUserIdToCourses.html">AddUserIdToCourses</a>
+  
+    <li><a href="../../../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../../../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../../../Assignment.html">Assignment</a>
+  
+    <li><a href="../../../AssignmentTest.html">AssignmentTest</a>
+  
+    <li><a href="../../../AssignmentsController.html">AssignmentsController</a>
+  
+    <li><a href="../../../AssignmentsControllerTest.html">AssignmentsControllerTest</a>
+  
+    <li><a href="../../../AssignmentsHelper.html">AssignmentsHelper</a>
+  
+    <li><a href="../../../AssignmentsHelperTest.html">AssignmentsHelperTest</a>
+  
+    <li><a href="../../../Course.html">Course</a>
+  
+    <li><a href="../../../CourseTest.html">CourseTest</a>
+  
+    <li><a href="../../../CoursesController.html">CoursesController</a>
+  
+    <li><a href="../../../CoursesControllerTest.html">CoursesControllerTest</a>
+  
+    <li><a href="../../../CoursesHelper.html">CoursesHelper</a>
+  
+    <li><a href="../../../CoursesHelperTest.html">CoursesHelperTest</a>
+  
+    <li><a href="../../../CreateAssignments.html">CreateAssignments</a>
+  
+    <li><a href="../../../CreateCourses.html">CreateCourses</a>
+  
+    <li><a href="../../../CreateGrades.html">CreateGrades</a>
+  
+    <li><a href="../../../CreateLinks.html">CreateLinks</a>
+  
+    <li><a href="../../../CreateSessions.html">CreateSessions</a>
+  
+    <li><a href="../../../CreateStudents.html">CreateStudents</a>
+  
+    <li><a href="../../../CreateTags.html">CreateTags</a>
+  
+    <li><a href="../../../CreateUsers.html">CreateUsers</a>
+  
+    <li><a href="../../../FlowchartTest.html">FlowchartTest</a>
+  
+    <li><a href="../../../FlowchartsControllerTest.html">FlowchartsControllerTest</a>
+  
+    <li><a href="../../../FlowchartsHelper.html">FlowchartsHelper</a>
+  
+    <li><a href="../../../FlowchartsHelperTest.html">FlowchartsHelperTest</a>
+  
+    <li><a href="../../../Flowghost.html">Flowghost</a>
+  
+    <li><a href="../../../Flowghost/Application.html">Flowghost::Application</a>
+  
+    <li><a href="../../../Grade.html">Grade</a>
+  
+    <li><a href="../../../GradeTest.html">GradeTest</a>
+  
+    <li><a href="../../../GradesController.html">GradesController</a>
+  
+    <li><a href="../../../GradesControllerTest.html">GradesControllerTest</a>
+  
+    <li><a href="../../../GradesHelper.html">GradesHelper</a>
+  
+    <li><a href="../../../GradesHelperTest.html">GradesHelperTest</a>
+  
+    <li><a href="../../../HomeController.html">HomeController</a>
+  
+    <li><a href="../../../HomeControllerTest.html">HomeControllerTest</a>
+  
+    <li><a href="../../../HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="../../../HomeHelperTest.html">HomeHelperTest</a>
+  
+    <li><a href="../../../Link.html">Link</a>
+  
+    <li><a href="../../../LinkTest.html">LinkTest</a>
+  
+    <li><a href="../../../Logger.html">Logger</a>
+  
+    <li><a href="../../../RemoveAssignmentFromCourses.html">RemoveAssignmentFromCourses</a>
+  
+    <li><a href="../../../RemoveAssignmentNameFromGrades.html">RemoveAssignmentNameFromGrades</a>
+  
+    <li><a href="../../../RemoveAssignmentsFromCourses.html">RemoveAssignmentsFromCourses</a>
+  
+    <li><a href="../../../RemoveGroupFromCourses.html">RemoveGroupFromCourses</a>
+  
+    <li><a href="../../../RemoveLinksFromCourses.html">RemoveLinksFromCourses</a>
+  
+    <li><a href="../../../RemoveNodeIdsFromAssignments.html">RemoveNodeIdsFromAssignments</a>
+  
+    <li><a href="../../../RemoveNodesFromCourses.html">RemoveNodesFromCourses</a>
+  
+    <li><a href="../../../RemoveTags.html">RemoveTags</a>
+  
+    <li><a href="../../../RenameSourceIdToTarget.html">RenameSourceIdToTarget</a>
+  
+    <li><a href="../../../RenameTargetIdToTarget.html">RenameTargetIdToTarget</a>
+  
+    <li><a href="../../../Session.html">Session</a>
+  
+    <li><a href="../../../SessionTest.html">SessionTest</a>
+  
+    <li><a href="../../../SessionsController.html">SessionsController</a>
+  
+    <li><a href="../../../SessionsControllerTest.html">SessionsControllerTest</a>
+  
+    <li><a href="../../../SessionsHelper.html">SessionsHelper</a>
+  
+    <li><a href="../../../SessionsHelperTest.html">SessionsHelperTest</a>
+  
+    <li><a href="../../../Student.html">Student</a>
+  
+    <li><a href="../../../StudentMailer.html">StudentMailer</a>
+  
+    <li><a href="../../../StudentMailerTest.html">StudentMailerTest</a>
+  
+    <li><a href="../../../StudentTest.html">StudentTest</a>
+  
+    <li><a href="../../../StudentsController.html">StudentsController</a>
+  
+    <li><a href="../../../StudentsControllerTest.html">StudentsControllerTest</a>
+  
+    <li><a href="../../../StudentsHelper.html">StudentsHelper</a>
+  
+    <li><a href="../../../StudentsHelperTest.html">StudentsHelperTest</a>
+  
+    <li><a href="../../../Tag.html">Tag</a>
+  
+    <li><a href="../../../TagAssignment.html">TagAssignment</a>
+  
+    <li><a href="../../../TagAssignmentTest.html">TagAssignmentTest</a>
+  
+    <li><a href="../../../TagTest.html">TagTest</a>
+  
+    <li><a href="../../../User.html">User</a>
+  
+    <li><a href="../../../UserTest.html">UserTest</a>
+  
+    <li><a href="../../../UsersController.html">UsersController</a>
+  
+    <li><a href="../../../UsersControllerTest.html">UsersControllerTest</a>
+  
+    <li><a href="../../../UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="../../../UsersHelperTest.html">UsersHelperTest</a>
+  
+    <li><a href="../../../ViewControllerTest.html">ViewControllerTest</a>
+  
+    <li><a href="../../../ViewHelper.html">ViewHelper</a>
+  
+    <li><a href="../../../ViewHelperTest.html">ViewHelperTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<pre>Software License Agreement (BSD License)
+http://taffydb.com
+Copyright (c)
+All rights reserved.
+
+Redistribution and use of this software in source and binary forms, with or without modification, are permitted provided that the following condition is met:
+
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ jslint        browser : true, continue : true,
+devel  : true, indent  : 2,    maxerr   : 500,
+newcap : true, nomen   : true, plusplus : true,
+regexp : true, sloppy  : true, vars     : false,
+white  : true
+/</pre>
+
+<p>// BUILD 193d48d, modified by mmikowski to pass jslint</p>
+
+<p>// Setup TAFFY name space to return an object with methods var TAFFY,
+exports, T; (function () {</p>
+
+<pre>&#39;use strict&#39;;
+var
+  typeList,     makeTest,     idx,    typeKey,
+  version,      TC,           idpad,  cmax,
+  API,          protectJSON,  each,   eachin,
+  isIndexable,  returnFilter, runFilters,
+  numcharsplit, orderByCol,   run,    intersection,
+  filter,       makeCid,      safeForJson,
+  isRegexp
+  ;
+
+if ( ! TAFFY ){
+  // TC = Counter for Taffy DBs on page, used for unique IDs
+  // cmax = size of charnumarray conversion cache
+  // idpad = zeros to pad record IDs with
+  version = &#39;2.7&#39;;
+  TC      = 1;
+  idpad   = &#39;000000&#39;;
+  cmax    = 1000;
+  API     = {};
+
+  protectJSON = function ( t ) {
+    // ****************************************
+    // *
+    // * Takes: a variable
+    // * Returns: the variable if object/array or the parsed variable if JSON
+    // *
+    // ****************************************  
+    if ( TAFFY.isArray( t ) || TAFFY.isObject( t ) ){
+      return t;
+    }
+    else {
+      return JSON.parse( t );
+    }
+  };
+
+  // gracefully stolen from underscore.js
+  intersection = function(array1, array2) {
+      return filter(array1, function(item) {
+        return array2.indexOf(item) &gt;= 0;
+      });
+  };
+
+  // gracefully stolen from underscore.js
+  filter = function(obj, iterator, context) {
+      var results = [];
+      if (obj == null) return results;
+      if (Array.prototype.filter &amp;&amp; obj.filter === Array.prototype.filter) return obj.filter(iterator, context);
+      each(obj, function(value, index, list) {
+        if (iterator.call(context, value, index, list)) results[results.length] = value;
+      });
+      return results;
+  };
+
+  isRegexp = function(aObj) {
+      return Object.prototype.toString.call(aObj)===&#39;[object RegExp]&#39;;
+  }
+
+  safeForJson = function(aObj) {
+      var myResult = T.isArray(aObj) ? [] : T.isObject(aObj) ? {} : null;
+      if(aObj===null) return aObj;
+      for(var i in aObj) {
+          myResult[i]  = isRegexp(aObj[i]) ? aObj[i].toString() : T.isArray(aObj[i]) || T.isObject(aObj[i]) ? safeForJson(aObj[i]) : aObj[i];
+      }
+      return myResult;
+  }
+
+  makeCid = function(aContext) {
+      var myCid = JSON.stringify(aContext);
+      if(myCid.match(/regex/)===null) return myCid;
+      return JSON.stringify(safeForJson(aContext));
+  }
+
+  each = function ( a, fun, u ) {
+    var r, i, x, y;
+    // ****************************************
+    // *
+    // * Takes:
+    // * a = an object/value or an array of objects/values
+    // * f = a function
+    // * u = optional flag to describe how to handle undefined values
+    //   in array of values. True: pass them to the functions,
+    //   False: skip. Default False;
+    // * Purpose: Used to loop over arrays
+    // *
+    // ****************************************  
+    if ( a &amp;&amp; ((T.isArray( a ) &amp;&amp; a.length === 1) || (!T.isArray( a ))) ){
+      fun( (T.isArray( a )) ? a[0] : a, 0 );
+    }
+    else {
+      for ( r, i, x = 0, a = (T.isArray( a )) ? a : [a], y = a.length;
+            x &lt; y; x++ )
+      {
+        i = a[x];
+        if ( !T.isUndefined( i ) || (u || false) ){
+          r = fun( i, x );
+          if ( r === T.EXIT ){
+            break;
+          }
+
+        }
+      }
+    }
+  };
+
+  eachin = function ( o, fun ) {
+    // ****************************************
+    // *
+    // * Takes:
+    // * o = an object
+    // * f = a function
+    // * Purpose: Used to loop over objects
+    // *
+    // ****************************************  
+    var x = 0, r, i;
+
+    for ( i in o ){
+      if ( o.hasOwnProperty( i ) ){
+        r = fun( o[i], i, x++ );
+        if ( r === T.EXIT ){
+          break;
+        }
+      }
+    }
+
+  };
+
+  API.extend = function ( m, f ) {
+    // ****************************************
+    // *
+    // * Takes: method name, function
+    // * Purpose: Add a custom method to the API
+    // *
+    // ****************************************  
+    API[m] = function () {
+      return f.apply( this, arguments );
+    };
+  };
+
+  isIndexable = function ( f ) {
+    var i;
+    // Check to see if record ID
+    if ( T.isString( f ) &amp;&amp; /[t][0-9]*[r][0-9]  i.test( f ) ){
+      return true;
+    }
+    // Check to see if record
+    if ( T.isObject( f ) &amp;&amp; f.___id &amp;&amp; f.___s ){
+      return true;
+    }
+
+    // Check to see if array of indexes
+    if ( T.isArray( f ) ){
+      i = true;
+      each( f, function ( r ) {
+        if ( !isIndexable( r ) ){
+          i = false;
+
+          return TAFFY.EXIT;
+        }
+      });
+      return i;
+    }
+
+    return false;
+  };
+
+  runFilters = function ( r, filter ) {
+    // ****************************************
+    // *
+    // * Takes: takes a record and a collection of filters
+    // * Returns: true if the record matches, false otherwise
+    // ****************************************
+    var match = true;
+
+    each( filter, function ( mf ) {
+      switch ( T.typeOf( mf ) ){
+        case &#39;function&#39;:
+          // run function
+          if ( !mf.apply( r ) ){
+            match = false;
+            return TAFFY.EXIT;
+          }
+          break;
+        case &#39;array&#39;:
+          // loop array and treat like a SQL or
+          match = (mf.length === 1) ? (runFilters( r, mf[0] )) :
+            (mf.length === 2) ? (runFilters( r, mf[0] ) ||
+              runFilters( r, mf[1] )) :
+              (mf.length === 3) ? (runFilters( r, mf[0] ) ||
+                runFilters( r, mf[1] ) || runFilters( r, mf[2] )) :
+                (mf.length === 4) ? (runFilters( r, mf[0] ) ||
+                  runFilters( r, mf[1] ) || runFilters( r, mf[2] ) ||
+                  runFilters( r, mf[3] )) : false;
+          if ( mf.length &gt; 4 ){
+            each( mf, function ( f ) {
+              if ( runFilters( r, f ) ){
+                match = true;
+              }
+            });
+          }
+          break;
+      }
+    });
+
+    return match;
+  };
+
+  returnFilter = function ( f ) {
+    // ****************************************
+    // *
+    // * Takes: filter object
+    // * Returns: a filter function
+    // * Purpose: Take a filter object and return a function that can be used to compare
+    // * a TaffyDB record to see if the record matches a query
+    // ****************************************  
+    var nf = [];
+    if ( T.isString( f ) &amp;&amp; /[t][0-9]*[r][0-9]*/i.test( f ) ){
+      f = { ___id : f };
+    }
+    if ( T.isArray( f ) ){
+      // if we are working with an array
+
+      each( f, function ( r ) {
+        // loop the array and return a filter func for each value
+        nf.push( returnFilter( r ) );
+      });
+      // now build a func to loop over the filters and return true if ANY of the filters match
+      // This handles logical OR expressions
+      f = function () {
+        var that = this, match = false;
+        each( nf, function ( f ) {
+          if ( runFilters( that, f ) ){
+            match = true;
+          }
+        });
+        return match;
+      };
+      return f;
+
+    }
+    // if we are dealing with an Object
+    if ( T.isObject( f ) ){
+      if ( T.isObject( f ) &amp;&amp; f.___id &amp;&amp; f.___s ){
+        f = { ___id : f.___id };
+      }
+
+      // Loop over each value on the object to prep match type and match value
+      eachin( f, function ( v, i ) {
+
+        // default match type to IS/Equals
+        if ( !T.isObject( v ) ){
+          v = {
+            &#39;is&#39; : v
+          };
+        }
+        // loop over each value on the value object  - if any
+        eachin( v, function ( mtest, s ) {
+          // s = match type, e.g. is, hasAll, like, etc
+          var c = [], looper;
+
+          // function to loop and apply filter
+          looper = (s === &#39;hasAll&#39;) ?
+            function ( mtest, func ) {
+              func( mtest );
+            } : each;
+
+          // loop over each test
+          looper( mtest, function ( mtest ) {
+
+            // su = match success
+            // f = match false
+            var su = true, f = false, matchFunc;
+
+            // push a function onto the filter collection to do the matching
+            matchFunc = function () {
+
+              // get the value from the record
+              var
+                mvalue   = this[i],
+                eqeq     = &#39;==&#39;,
+                bangeq   = &#39;!=&#39;,
+                eqeqeq   = &#39;===&#39;,
+                lt   = &#39;&lt;&#39;,
+                gt   = &#39;&gt;&#39;,
+                lteq   = &#39;&lt;=&#39;,
+                gteq   = &#39;&gt;=&#39;,
+                bangeqeq = &#39;!==&#39;,
+                r
+                ;
+
+              if (typeof mvalue === &#39;undefined&#39;) {
+                return false;
+              }
+
+              if ( (s.indexOf( &#39;!&#39; ) === 0) &amp;&amp; s !== bangeq &amp;&amp;
+                s !== bangeqeq )
+              {
+                // if the filter name starts with ! as in &#39;!is&#39; then reverse the match logic and remove the !
+                su = false;
+                s = s.substring( 1, s.length );
+              }
+              // get the match results based on the s/match type
+              /*jslint eqeq : true */
+              r = (
+                (s === &#39;regex&#39;) ? (mtest.test( mvalue )) : (s === &#39;lt&#39; || s === lt)
+                ? (mvalue &lt; mtest)  : (s === &#39;gt&#39; || s === gt)
+                ? (mvalue &gt; mtest)  : (s === &#39;lte&#39; || s === lteq)
+                ? (mvalue &lt;= mtest) : (s === &#39;gte&#39; || s === gteq)
+                ? (mvalue &gt;= mtest) : (s === &#39;left&#39;)
+                ? (mvalue.indexOf( mtest ) === 0) : (s === &#39;leftnocase&#39;)
+                ? (mvalue.toLowerCase().indexOf( mtest.toLowerCase() )
+                  === 0) : (s === &#39;right&#39;)
+                ? (mvalue.substring( (mvalue.length - mtest.length) )
+                  === mtest) : (s === &#39;rightnocase&#39;)
+                ? (mvalue.toLowerCase().substring(
+                  (mvalue.length - mtest.length) ) === mtest.toLowerCase())
+                  : (s === &#39;like&#39;)
+                ? (mvalue.indexOf( mtest ) &gt;= 0) : (s === &#39;likenocase&#39;)
+                ? (mvalue.toLowerCase().indexOf(mtest.toLowerCase()) &gt;= 0)
+                  : (s === eqeqeq || s === &#39;is&#39;)
+                ? (mvalue ===  mtest) : (s === eqeq)
+                ? (mvalue == mtest) : (s === bangeqeq)
+                ? (mvalue !==  mtest) : (s === bangeq)
+                ? (mvalue != mtest) : (s === &#39;isnocase&#39;)
+                ? (mvalue.toLowerCase
+                  ? mvalue.toLowerCase() === mtest.toLowerCase()
+                    : mvalue === mtest) : (s === &#39;has&#39;)
+                ? (T.has( mvalue, mtest )) : (s === &#39;hasall&#39;)
+                ? (T.hasAll( mvalue, mtest )) : (s === &#39;contains&#39;)
+                ? (TAFFY.isArray(mvalue) &amp;&amp; mvalue.indexOf(mtest) &gt; -1) : (
+                  s.indexOf( &#39;is&#39; ) === -1
+                    &amp;&amp; !TAFFY.isNull( mvalue )
+                    &amp;&amp; !TAFFY.isUndefined( mvalue )
+                    &amp;&amp; !TAFFY.isObject( mtest )
+                    &amp;&amp; !TAFFY.isArray( mtest )
+                  )
+                ? (mtest === mvalue[s])
+                  : (T[s] &amp;&amp; T.isFunction( T[s] )
+                  &amp;&amp; s.indexOf( &#39;is&#39; ) === 0)
+                ? T[s]( mvalue ) === mtest
+                  : (T[s] &amp;&amp; T.isFunction( T[s] ))
+                ? T[s]( mvalue, mtest ) : (false)
+              );
+              /*jslint eqeq : false */
+              r = (r &amp;&amp; !su) ? false : (!r &amp;&amp; !su) ? true : r;
+
+              return r;
+            };
+            c.push( matchFunc );
+
+          });
+          // if only one filter in the collection push it onto the filter list without the array
+          if ( c.length === 1 ){
+
+            nf.push( c[0] );
+          }
+          else {
+            // else build a function to loop over all the filters and return true only if ALL match
+            // this is a logical AND
+            nf.push( function () {
+              var that = this, match = false;
+              each( c, function ( f ) {
+                if ( f.apply( that ) ){
+                  match = true;
+                }
+              });
+              return match;
+            });
+          }
+        });
+      });
+      // finally return a single function that wraps all the other functions and will run a query
+      // where all functions have to return true for a record to appear in a query result
+      f = function () {
+        var that = this, match = true;
+        // faster if less than  4 functions
+        match = (nf.length === 1 &amp;&amp; !nf[0].apply( that )) ? false :
+          (nf.length === 2 &amp;&amp;
+            (!nf[0].apply( that ) || !nf[1].apply( that ))) ? false :
+            (nf.length === 3 &amp;&amp;
+              (!nf[0].apply( that ) || !nf[1].apply( that ) ||
+                !nf[2].apply( that ))) ? false :
+              (nf.length === 4 &amp;&amp;
+                (!nf[0].apply( that ) || !nf[1].apply( that ) ||
+                  !nf[2].apply( that ) || !nf[3].apply( that ))) ? false
+                : true;
+        if ( nf.length &gt; 4 ){
+          each( nf, function ( f ) {
+            if ( !runFilters( that, f ) ){
+              match = false;
+            }
+          });
+        }
+        return match;
+      };
+      return f;
+    }
+
+    // if function
+    if ( T.isFunction( f ) ){
+      return f;
+    }
+  };
+
+  orderByCol = function ( ar, o ) {
+    // ****************************************
+    // *
+    // * Takes: takes an array and a sort object
+    // * Returns: the array sorted
+    // * Purpose: Accept filters such as &quot;[col], [col2]&quot; or &quot;[col] desc&quot; and sort on those columns
+    // *
+    // ****************************************
+
+    var sortFunc = function ( a, b ) {
+      // function to pass to the native array.sort to sort an array
+      var r = 0;
+
+      T.each( o, function ( sd ) {
+        // loop over the sort instructions
+        // get the column name
+        var o, col, dir, c, d;
+        o = sd.split( &#39; &#39; );
+        col = o[0];
+
+        // get the direction
+        dir = (o.length === 1) ? &quot;logical&quot; : o[1];
+
+        if ( dir === &#39;logical&#39; ){
+          // if dir is logical than grab the charnum arrays for the two values we are looking at
+          c = numcharsplit( a[col] );
+          d = numcharsplit( b[col] );
+          // loop over the charnumarrays until one value is higher than the other
+          T.each( (c.length &lt;= d.length) ? c : d, function ( x, i ) {
+            if ( c[i] &lt; d[i] ){
+              r = -1;
+              return TAFFY.EXIT;
+            }
+            else if ( c[i] &gt; d[i] ){
+              r = 1;
+              return TAFFY.EXIT;
+            }
+          } );
+        }
+        else if ( dir === &#39;logicaldesc&#39; ){
+          // if logicaldesc than grab the charnum arrays for the two values we are looking at
+          c = numcharsplit( a[col] );
+          d = numcharsplit( b[col] );
+          // loop over the charnumarrays until one value is lower than the other
+          T.each( (c.length &lt;= d.length) ? c : d, function ( x, i ) {
+            if ( c[i] &gt; d[i] ){
+              r = -1;
+              return TAFFY.EXIT;
+            }
+            else if ( c[i] &lt; d[i] ){
+              r = 1;
+              return TAFFY.EXIT;
+            }
+          } );
+        }
+        else if ( dir === &#39;asec&#39; &amp;&amp; a[col] &lt; b[col] ){
+          // if asec - default - check to see which is higher
+          r = -1;
+          return T.EXIT;
+        }
+        else if ( dir === &#39;asec&#39; &amp;&amp; a[col] &gt; b[col] ){
+          // if asec - default - check to see which is higher
+          r = 1;
+          return T.EXIT;
+        }
+        else if ( dir === &#39;desc&#39; &amp;&amp; a[col] &gt; b[col] ){
+          // if desc check to see which is lower
+          r = -1;
+          return T.EXIT;
+
+        }
+        else if ( dir === &#39;desc&#39; &amp;&amp; a[col] &lt; b[col] ){
+          // if desc check to see which is lower
+          r = 1;
+          return T.EXIT;
+
+        }
+        // if r is still 0 and we are doing a logical sort than look to see if one array is longer than the other
+        if ( r === 0 &amp;&amp; dir === &#39;logical&#39; &amp;&amp; c.length &lt; d.length ){
+          r = -1;
+        }
+        else if ( r === 0 &amp;&amp; dir === &#39;logical&#39; &amp;&amp; c.length &gt; d.length ){
+          r = 1;
+        }
+        else if ( r === 0 &amp;&amp; dir === &#39;logicaldesc&#39; &amp;&amp; c.length &gt; d.length ){
+          r = -1;
+        }
+        else if ( r === 0 &amp;&amp; dir === &#39;logicaldesc&#39; &amp;&amp; c.length &lt; d.length ){
+          r = 1;
+        }
+
+        if ( r !== 0 ){
+          return T.EXIT;
+        }
+
+      } );
+      return r;
+    };
+    // call the sort function and return the newly sorted array
+    return (ar &amp;&amp; ar.push) ? ar.sort( sortFunc ) : ar;
+
+  };
+
+  // ****************************************
+  // *
+  // * Takes: a string containing numbers and letters and turn it into an array
+  // * Returns: return an array of numbers and letters
+  // * Purpose: Used for logical sorting. String Example: 12ABC results: [12,&#39;ABC&#39;]
+  // **************************************** 
+  (function () {
+    // creates a cache for numchar conversions
+    var cache = {}, cachcounter = 0;
+    // creates the numcharsplit function
+    numcharsplit = function ( thing ) {
+      // if over 1000 items exist in the cache, clear it and start over
+      if ( cachcounter &gt; cmax ){
+        cache = {};
+        cachcounter = 0;
+      }
+
+      // if a cache can be found for a numchar then return its array value
+      return cache[&#39;_&#39; + thing] || (function () {
+        // otherwise do the conversion
+        // make sure it is a string and setup so other variables
+        var nthing = String( thing ),
+          na = [],
+          rv = &#39;_&#39;,
+          rt = &#39;&#39;,
+          x, xx, c;
+
+        // loop over the string char by char
+        for ( x = 0, xx = nthing.length; x &lt; xx; x++ ){
+          // take the char at each location
+          c = nthing.charCodeAt( x );
+          // check to see if it is a valid number char and append it to the array.
+          // if last char was a string push the string to the charnum array
+          if ( ( c &gt;= 48 &amp;&amp; c &lt;= 57 ) || c === 46 ){
+            if ( rt !== &#39;n&#39; ){
+              rt = &#39;n&#39;;
+              na.push( rv.toLowerCase() );
+              rv = &#39;&#39;;
+            }
+            rv = rv + nthing.charAt( x );
+          }
+          else {
+            // check to see if it is a valid string char and append to string
+            // if last char was a number push the whole number to the charnum array
+            if ( rt !== &#39;s&#39; ){
+              rt = &#39;s&#39;;
+              na.push( parseFloat( rv ) );
+              rv = &#39;&#39;;
+            }
+            rv = rv + nthing.charAt( x );
+          }
+        }
+        // once done, push the last value to the charnum array and remove the first uneeded item
+        na.push( (rt === &#39;n&#39;) ? parseFloat( rv ) : rv.toLowerCase() );
+        na.shift();
+        // add to cache
+        cache[&#39;_&#39; + thing] = na;
+        cachcounter++;
+        // return charnum array
+        return na;
+      }());
+    };
+  }());
+
+  // ****************************************
+  // *
+  // * Runs a query
+  // **************************************** 
+
+  run = function () {
+    this.context( {
+      results : this.getDBI().query( this.context() )
+    });
+
+  };
+
+  API.extend( &#39;filter&#39;, function () {
+    // ****************************************
+    // *
+    // * Takes: takes unlimited filter objects as arguments
+    // * Returns: method collection
+    // * Purpose: Take filters as objects and cache functions for later lookup when a query is run
+    // **************************************** 
+    var
+      nc = TAFFY.mergeObj( this.context(), { run : null } ),
+      nq = []
+    ;
+    each( nc.q, function ( v ) {
+      nq.push( v );
+    });
+    nc.q = nq;
+    // Hadnle passing of ___ID or a record on lookup.
+    each( arguments, function ( f ) {
+      nc.q.push( returnFilter( f ) );
+      nc.filterRaw.push( f );
+    });
+
+    return this.getroot( nc );
+  });
+
+  API.extend( &#39;order&#39;, function ( o ) {
+    // ****************************************
+    // *
+    // * Purpose: takes a string and creates an array of order instructions to be used with a query
+    // ****************************************
+
+    o = o.split( &#39;,&#39; );
+    var x = [], nc;
+
+    each( o, function ( r ) {
+      x.push( r.replace( /^\s*/, &#39;&#39; ).replace( /\s*$/, &#39;&#39; ) );
+    });
+
+    nc = TAFFY.mergeObj( this.context(), {sort : null} );
+    nc.order = x;
+
+    return this.getroot( nc );
+  });
+
+  API.extend( &#39;limit&#39;, function ( n ) {
+    // ****************************************
+    // *
+    // * Purpose: takes a limit number to limit the number of rows returned by a query. Will update the results
+    // * of a query
+    // **************************************** 
+    var nc = TAFFY.mergeObj( this.context(), {}),
+      limitedresults
+      ;
+
+    nc.limit = n;
+
+    if ( nc.run &amp;&amp; nc.sort ){
+      limitedresults = [];
+      each( nc.results, function ( i, x ) {
+        if ( (x + 1) &gt; n ){
+          return TAFFY.EXIT;
+        }
+        limitedresults.push( i );
+      });
+      nc.results = limitedresults;
+    }
+
+    return this.getroot( nc );
+  });
+
+  API.extend( &#39;start&#39;, function ( n ) {
+    // ****************************************
+    // *
+    // * Purpose: takes a limit number to limit the number of rows returned by a query. Will update the results
+    // * of a query
+    // **************************************** 
+    var nc = TAFFY.mergeObj( this.context(), {} ),
+      limitedresults
+      ;
+
+    nc.start = n;
+
+    if ( nc.run &amp;&amp; nc.sort &amp;&amp; !nc.limit ){
+      limitedresults = [];
+      each( nc.results, function ( i, x ) {
+        if ( (x + 1) &gt; n ){
+          limitedresults.push( i );
+        }
+      });
+      nc.results = limitedresults;
+    }
+    else {
+      nc = TAFFY.mergeObj( this.context(), {run : null, start : n} );
+    }
+
+    return this.getroot( nc );
+  });
+
+  API.extend( &#39;update&#39;, function ( arg0, arg1, arg2 ) {
+    // ****************************************
+    // *
+    // * Takes: a object and passes it off DBI update method for all matched records
+    // **************************************** 
+    var runEvent = true, o = {}, args = arguments, that;
+    if ( TAFFY.isString( arg0 ) &amp;&amp;
+      (arguments.length === 2 || arguments.length === 3) )
+    {
+      o[arg0] = arg1;
+      if ( arguments.length === 3 ){
+        runEvent = arg2;
+      }
+    }
+    else {
+      o = arg0;
+      if ( args.length === 2 ){
+        runEvent = arg1;
+      }
+    }
+
+    that = this;
+    run.call( this );
+    each( this.context().results, function ( r ) {
+      var c = o;
+      if ( TAFFY.isFunction( c ) ){
+        c = c.apply( TAFFY.mergeObj( r, {} ) );
+      }
+      else {
+        if ( T.isFunction( c ) ){
+          c = c( TAFFY.mergeObj( r, {} ) );
+        }
+      }
+      if ( TAFFY.isObject( c ) ){
+        that.getDBI().update( r.___id, c, runEvent );
+      }
+    });
+    if ( this.context().results.length ){
+      this.context( { run : null });
+    }
+    return this;
+  });
+  API.extend( &#39;remove&#39;, function ( runEvent ) {
+    // ****************************************
+    // *
+    // * Purpose: removes records from the DB via the remove and removeCommit DBI methods
+    // **************************************** 
+    var that = this, c = 0;
+    run.call( this );
+    each( this.context().results, function ( r ) {
+      that.getDBI().remove( r.___id );
+      c++;
+    });
+    if ( this.context().results.length ){
+      this.context( {
+        run : null
+      });
+      that.getDBI().removeCommit( runEvent );
+    }
+
+    return c;
+  });
+
+  API.extend( &#39;count&#39;, function () {
+    // ****************************************
+    // *
+    // * Returns: The length of a query result
+    // **************************************** 
+    run.call( this );
+    return this.context().results.length;
+  });
+
+  API.extend( &#39;callback&#39;, function ( f, delay ) {
+    // ****************************************
+    // *
+    // * Returns null;
+    // * Runs a function on return of run.call
+    // **************************************** 
+    if ( f ){
+      var that = this;
+      setTimeout( function () {
+        run.call( that );
+        f.call( that.getroot( that.context() ) );
+      }, delay || 0 );
+    }
+
+    return null;
+  });
+
+  API.extend( &#39;get&#39;, function () {
+    // ****************************************
+    // *
+    // * Returns: An array of all matching records
+    // **************************************** 
+    run.call( this );
+    return this.context().results;
+  });
+
+  API.extend( &#39;stringify&#39;, function () {
+    // ****************************************
+    // *
+    // * Returns: An JSON string of all matching records
+    // **************************************** 
+    return JSON.stringify( this.get() );
+  });
+  API.extend( &#39;first&#39;, function () {
+    // ****************************************
+    // *
+    // * Returns: The first matching record
+    // **************************************** 
+    run.call( this );
+    return this.context().results[0] || false;
+  });
+  API.extend( &#39;last&#39;, function () {
+    // ****************************************
+    // *
+    // * Returns: The last matching record
+    // **************************************** 
+    run.call( this );
+    return this.context().results[this.context().results.length - 1] ||
+      false;
+  });
+
+  API.extend( &#39;sum&#39;, function () {
+    // ****************************************
+    // *
+    // * Takes: column to sum up
+    // * Returns: Sums the values of a column
+    // **************************************** 
+    var total = 0, that = this;
+    run.call( that );
+    each( arguments, function ( c ) {
+      each( that.context().results, function ( r ) {
+        total = total + (r[c] || 0);
+      });
+    });
+    return total;
+  });
+
+  API.extend( &#39;min&#39;, function ( c ) {
+    // ****************************************
+    // *
+    // * Takes: column to find min
+    // * Returns: the lowest value
+    // **************************************** 
+    var lowest = null;
+    run.call( this );
+    each( this.context().results, function ( r ) {
+      if ( lowest === null || r[c] &lt; lowest ){
+        lowest = r[c];
+      }
+    });
+    return lowest;
+  });
+
+  //  Taffy innerJoin Extension (OCD edition)
+  //  =======================================
+  //
+  //  How to Use
+  //  **********
+  //
+  //  left_table.innerJoin( right_table, condition1 &lt;,... conditionN&gt; )
+  //
+  //  A condition can take one of 2 forms:
+  //
+  //    1. An ARRAY with 2 or 3 values:
+  //    A column name from the left table, an optional comparison string,
+  //    and column name from the right table.  The condition passes if the test
+  //    indicated is true.   If the condition string is omitted, &#39;===&#39; is assumed.
+  //    EXAMPLES: [ &#39;last_used_time&#39;, &#39;&gt;=&#39;, &#39;current_use_time&#39; ], [ &#39;user_id&#39;,&#39;id&#39; ]
+  //
+  //    2. A FUNCTION:
+  //    The function receives a left table row and right table row during the
+  //    cartesian join.  If the function returns true for the rows considered,
+  //    the merged row is included in the result set.
+  //    EXAMPLE: function (l,r){ return l.name === r.label; }
+  //
+  //  Conditions are considered in the order they are presented.  Therefore the best
+  //  performance is realized when the least expensive and highest prune-rate
+  //  conditions are placed first, since if they return false Taffy skips any
+  //  further condition tests.
+  //
+  //  Other notes
+  //  ***********
+  //
+  //  This code passes jslint with the exception of 2 warnings about
+  //  the &#39;==&#39; and &#39;!=&#39; lines.  We can&#39;t do anything about that short of
+  //  deleting the lines.
+  //
+  //  Credits
+  //  *******
+  //
+  //  Heavily based upon the work of Ian Toltz.
+  //  Revisions to API by Michael Mikowski.
+  //  Code convention per standards in http://manning.com/mikowski
+  (function () {
+    var innerJoinFunction = (function () {
+      var fnCompareList, fnCombineRow, fnMain;
+
+      fnCompareList = function ( left_row, right_row, arg_list ) {
+        var data_lt, data_rt, op_code, error;
+
+        if ( arg_list.length === 2 ){
+          data_lt = left_row[arg_list[0]];
+          op_code = &#39;===&#39;;
+          data_rt = right_row[arg_list[1]];
+        }
+        else {
+          data_lt = left_row[arg_list[0]];
+          op_code = arg_list[1];
+          data_rt = right_row[arg_list[2]];
+        }
+
+        /*jslint eqeq : true */
+        switch ( op_code ){
+          case &#39;===&#39; :
+            return data_lt === data_rt;
+          case &#39;!==&#39; :
+            return data_lt !== data_rt;
+          case &#39;&lt;&#39;   :
+            return data_lt &lt; data_rt;
+          case &#39;&gt;&#39;   :
+            return data_lt &gt; data_rt;
+          case &#39;&lt;=&#39;  :
+            return data_lt &lt;= data_rt;
+          case &#39;&gt;=&#39;  :
+            return data_lt &gt;= data_rt;
+          case &#39;==&#39;  :
+            return data_lt == data_rt;
+          case &#39;!=&#39;  :
+            return data_lt != data_rt;
+          default :
+            throw String( op_code ) + &#39; is not supported&#39;;
+        }
+        // &#39;jslint eqeq : false&#39;  here results in
+        // &quot;Unreachable &#39;/*jslint&#39; after &#39;return&#39;&quot;.
+        // We don&#39;t need it though, as the rule exception
+        // is discarded at the end of this functional scope
+      };
+
+      fnCombineRow = function ( left_row, right_row ) {
+        var out_map = {}, i, prefix;
+
+        for ( i in left_row ){
+          if ( left_row.hasOwnProperty( i ) ){
+            out_map[i] = left_row[i];
+          }
+        }
+        for ( i in right_row ){
+          if ( right_row.hasOwnProperty( i ) &amp;&amp; i !== &#39;___id&#39; &amp;&amp;
+            i !== &#39;___s&#39; )
+          {
+            prefix = !TAFFY.isUndefined( out_map[i] ) ? &#39;right_&#39; : &#39;&#39;;
+            out_map[prefix + String( i ) ] = right_row[i];
+          }
+        }
+        return out_map;
+      };
+
+      fnMain = function ( table ) {
+        var
+          right_table, i,
+          arg_list = arguments,
+          arg_length = arg_list.length,
+          result_list = []
+          ;
+
+        if ( typeof table.filter !== &#39;function&#39; ){
+          if ( table.TAFFY ){ right_table = table(); }
+          else {
+            throw &#39;TAFFY DB or result not supplied&#39;;
+          }
+        }
+        else { right_table = table; }
+
+        this.context( {
+          results : this.getDBI().query( this.context() )
+        } );
+
+        TAFFY.each( this.context().results, function ( left_row ) {
+          right_table.each( function ( right_row ) {
+            var arg_data, is_ok = true;
+            CONDITION:
+              for ( i = 1; i &lt; arg_length; i++ ){
+                arg_data = arg_list[i];
+                if ( typeof arg_data === &#39;function&#39; ){
+                  is_ok = arg_data( left_row, right_row );
+                }
+                else if ( typeof arg_data === &#39;object&#39; &amp;&amp; arg_data.length ){
+                  is_ok = fnCompareList( left_row, right_row, arg_data );
+                }
+                else {
+                  is_ok = false;
+                }
+
+                if ( !is_ok ){ break CONDITION; } // short circuit
+              }
+
+            if ( is_ok ){
+              result_list.push( fnCombineRow( left_row, right_row ) );
+            }
+          } );
+        } );
+        return TAFFY( result_list )();
+      };
+
+      return fnMain;
+    }());
+
+    API.extend( &#39;join&#39;, innerJoinFunction );
+  }());
+
+  API.extend( &#39;max&#39;, function ( c ) {
+    // ****************************************
+    // *
+    // * Takes: column to find max
+    // * Returns: the highest value
+    // ****************************************
+    var highest = null;
+    run.call( this );
+    each( this.context().results, function ( r ) {
+      if ( highest === null || r[c] &gt; highest ){
+        highest = r[c];
+      }
+    });
+    return highest;
+  });
+
+  API.extend( &#39;select&#39;, function () {
+    // ****************************************
+    // *
+    // * Takes: columns to select values into an array
+    // * Returns: array of values
+    // * Note if more than one column is given an array of arrays is returned
+    // **************************************** 
+
+    var ra = [], args = arguments;
+    run.call( this );
+    if ( arguments.length === 1 ){
+
+      each( this.context().results, function ( r ) {
+
+        ra.push( r[args[0]] );
+      });
+    }
+    else {
+      each( this.context().results, function ( r ) {
+        var row = [];
+        each( args, function ( c ) {
+          row.push( r[c] );
+        });
+        ra.push( row );
+      });
+    }
+    return ra;
+  });
+  API.extend( &#39;distinct&#39;, function () {
+    // ****************************************
+    // *
+    // * Takes: columns to select unique alues into an array
+    // * Returns: array of values
+    // * Note if more than one column is given an array of arrays is returned
+    // **************************************** 
+    var ra = [], args = arguments;
+    run.call( this );
+    if ( arguments.length === 1 ){
+
+      each( this.context().results, function ( r ) {
+        var v = r[args[0]], dup = false;
+        each( ra, function ( d ) {
+          if ( v === d ){
+            dup = true;
+            return TAFFY.EXIT;
+          }
+        });
+        if ( !dup ){
+          ra.push( v );
+        }
+      });
+    }
+    else {
+      each( this.context().results, function ( r ) {
+        var row = [], dup = false;
+        each( args, function ( c ) {
+          row.push( r[c] );
+        });
+        each( ra, function ( d ) {
+          var ldup = true;
+          each( args, function ( c, i ) {
+            if ( row[i] !== d[i] ){
+              ldup = false;
+              return TAFFY.EXIT;
+            }
+          });
+          if ( ldup ){
+            dup = true;
+            return TAFFY.EXIT;
+          }
+        });
+        if ( !dup ){
+          ra.push( row );
+        }
+      });
+    }
+    return ra;
+  });
+  API.extend( &#39;supplant&#39;, function ( template, returnarray ) {
+    // ****************************************
+    // *
+    // * Takes: a string template formated with key to be replaced with values from the rows, flag to determine if we want array of strings
+    // * Returns: array of values or a string
+    // **************************************** 
+    var ra = [];
+    run.call( this );
+    each( this.context().results, function ( r ) {
+      // TODO: The curly braces used to be unescaped
+      ra.push( template.replace( /\{([^\{\}]*)\}/g, function ( a, b ) {
+        var v = r[b];
+        return typeof v === &#39;string&#39; || typeof v === &#39;number&#39; ? v : a;
+      } ) );
+    });
+    return (!returnarray) ? ra.join( &quot;&quot; ) : ra;
+  });
+
+  API.extend( &#39;each&#39;, function ( m ) {
+    // ****************************************
+    // *
+    // * Takes: a function
+    // * Purpose: loops over every matching record and applies the function
+    // **************************************** 
+    run.call( this );
+    each( this.context().results, m );
+    return this;
+  });
+  API.extend( &#39;map&#39;, function ( m ) {
+    // ****************************************
+    // *
+    // * Takes: a function
+    // * Purpose: loops over every matching record and applies the function, returing the results in an array
+    // **************************************** 
+    var ra = [];
+    run.call( this );
+    each( this.context().results, function ( r ) {
+      ra.push( m( r ) );
+    });
+    return ra;
+  });
+
+  T = function ( d ) {
+    // ****************************************
+    // *
+    // * T is the main TAFFY object
+    // * Takes: an array of objects or JSON
+    // * Returns a new TAFFYDB
+    // **************************************** 
+    var TOb = [],
+      ID = {},
+      RC = 1,
+      settings = {
+        template          : false,
+        onInsert          : false,
+        onUpdate          : false,
+        onRemove          : false,
+        onDBChange        : false,
+        storageName       : false,
+        forcePropertyCase : null,
+        cacheSize         : 100,
+        name              : &#39;&#39;
+      },
+      dm = new Date(),
+      CacheCount = 0,
+      CacheClear = 0,
+      Cache = {},
+      DBI, runIndexes, root
+      ;
+    // ****************************************
+    // *
+    // * TOb = this database
+    // * ID = collection of the record IDs and locations within the DB, used for fast lookups
+    // * RC = record counter, used for creating IDs
+    // * settings.template = the template to merge all new records with
+    // * settings.onInsert = event given a copy of the newly inserted record
+    // * settings.onUpdate = event given the original record, the changes, and the new record
+    // * settings.onRemove = event given the removed record
+    // * settings.forcePropertyCase = on insert force the proprty case to be lower or upper. default lower, null/undefined will leave case as is
+    // * dm = the modify date of the database, used for query caching
+    // **************************************** 
+
+    runIndexes = function ( indexes ) {
+      // ****************************************
+      // *
+      // * Takes: a collection of indexes
+      // * Returns: collection with records matching indexed filters
+      // **************************************** 
+
+      var records = [], UniqueEnforce = false;
+
+      if ( indexes.length === 0 ){
+        return TOb;
+      }
+
+      each( indexes, function ( f ) {
+        // Check to see if record ID
+        if ( T.isString( f ) &amp;&amp; /[t][0-9]*[r][0-9]*/i.test( f ) &amp;&amp;
+          TOb[ID[f]] )
+        {
+          records.push( TOb[ID[f]] );
+          UniqueEnforce = true;
+        }
+        // Check to see if record
+        if ( T.isObject( f ) &amp;&amp; f.___id &amp;&amp; f.___s &amp;&amp;
+          TOb[ID[f.___id]] )
+        {
+          records.push( TOb[ID[f.___id]] );
+          UniqueEnforce = true;
+        }
+        // Check to see if array of indexes
+        if ( T.isArray( f ) ){
+          each( f, function ( r ) {
+            each( runIndexes( r ), function ( rr ) {
+              records.push( rr );
+            });
+
+          });
+        }
+      });
+      if ( UniqueEnforce &amp;&amp; records.length &gt; 1 ){
+        records = [];
+      }
+
+      return records;
+    };
+
+    DBI = {
+      // ****************************************
+      // *
+      // * The DBI is the internal DataBase Interface that interacts with the data
+      // **************************************** 
+      dm           : function ( nd ) {
+        // ****************************************
+        // *
+        // * Takes: an optional new modify date
+        // * Purpose: used to get and set the DB modify date
+        // **************************************** 
+        if ( nd ){
+          dm = nd;
+          Cache = {};
+          CacheCount = 0;
+          CacheClear = 0;
+        }
+        if ( settings.onDBChange ){
+          setTimeout( function () {
+            settings.onDBChange.call( TOb );
+          }, 0 );
+        }
+        if ( settings.storageName ){
+          setTimeout( function () {
+            localStorage.setItem( &#39;taffy_&#39; + settings.storageName,
+              JSON.stringify( TOb ) );
+          });
+        }
+        return dm;
+      },
+      insert       : function ( i, runEvent ) {
+        // ****************************************
+        // *
+        // * Takes: a new record to insert
+        // * Purpose: merge the object with the template, add an ID, insert into DB, call insert event
+        // **************************************** 
+        var columns = [],
+          records   = [],
+          input     = protectJSON( i )
+          ;
+        each( input, function ( v, i ) {
+          var nv, o;
+          if ( T.isArray( v ) &amp;&amp; i === 0 ){
+            each( v, function ( av ) {
+
+              columns.push( (settings.forcePropertyCase === &#39;lower&#39;)
+                ? av.toLowerCase()
+                  : (settings.forcePropertyCase === &#39;upper&#39;)
+                ? av.toUpperCase() : av );
+            });
+            return true;
+          }
+          else if ( T.isArray( v ) ){
+            nv = {};
+            each( v, function ( av, ai ) {
+              nv[columns[ai]] = av;
+            });
+            v = nv;
+
+          }
+          else if ( T.isObject( v ) &amp;&amp; settings.forcePropertyCase ){
+            o = {};
+
+            eachin( v, function ( av, ai ) {
+              o[(settings.forcePropertyCase === &#39;lower&#39;) ? ai.toLowerCase()
+                : (settings.forcePropertyCase === &#39;upper&#39;)
+                ? ai.toUpperCase() : ai] = v[ai];
+            });
+            v = o;
+          }
+
+          RC++;
+          v.___id = &#39;T&#39; + String( idpad + TC ).slice( -6 ) + &#39;R&#39; +
+            String( idpad + RC ).slice( -6 );
+          v.___s = true;
+          records.push( v.___id );
+          if ( settings.template ){
+            v = T.mergeObj( settings.template, v );
+          }
+          TOb.push( v );
+
+          ID[v.___id] = TOb.length - 1;
+          if ( settings.onInsert &amp;&amp;
+            (runEvent || TAFFY.isUndefined( runEvent )) )
+          {
+            settings.onInsert.call( v );
+          }
+          DBI.dm( new Date() );
+        });
+        return root( records );
+      },
+      sort         : function ( o ) {
+        // ****************************************
+        // *
+        // * Purpose: Change the sort order of the DB itself and reset the ID bucket
+        // **************************************** 
+        TOb = orderByCol( TOb, o.split( &#39;,&#39; ) );
+        ID = {};
+        each( TOb, function ( r, i ) {
+          ID[r.___id] = i;
+        });
+        DBI.dm( new Date() );
+        return true;
+      },
+      update       : function ( id, changes, runEvent ) {
+        // ****************************************
+        // *
+        // * Takes: the ID of record being changed and the changes
+        // * Purpose: Update a record and change some or all values, call the on update method
+        // ****************************************
+
+        var nc = {}, or, nr, tc, hasChange;
+        if ( settings.forcePropertyCase ){
+          eachin( changes, function ( v, p ) {
+            nc[(settings.forcePropertyCase === &#39;lower&#39;) ? p.toLowerCase()
+              : (settings.forcePropertyCase === &#39;upper&#39;) ? p.toUpperCase()
+              : p] = v;
+          });
+          changes = nc;
+        }
+
+        or = TOb[ID[id]];
+        nr = T.mergeObj( or, changes );
+
+        tc = {};
+        hasChange = false;
+        eachin( nr, function ( v, i ) {
+          if ( TAFFY.isUndefined( or[i] ) || or[i] !== v ){
+            tc[i] = v;
+            hasChange = true;
+          }
+        });
+        if ( hasChange ){
+          if ( settings.onUpdate &amp;&amp;
+            (runEvent || TAFFY.isUndefined( runEvent )) )
+          {
+            settings.onUpdate.call( nr, TOb[ID[id]], tc );
+          }
+          TOb[ID[id]] = nr;
+          DBI.dm( new Date() );
+        }
+      },
+      remove       : function ( id ) {
+        // ****************************************
+        // *
+        // * Takes: the ID of record to be removed
+        // * Purpose: remove a record, changes its ___s value to false
+        // **************************************** 
+        TOb[ID[id]].___s = false;
+      },
+      removeCommit : function ( runEvent ) {
+        var x;
+        // ****************************************
+        // *
+        // * 
+        // * Purpose: loop over all records and remove records with ___s = false, call onRemove event, clear ID
+        // ****************************************
+        for ( x = TOb.length - 1; x &gt; -1; x-- ){
+
+          if ( !TOb[x].___s ){
+            if ( settings.onRemove &amp;&amp;
+              (runEvent || TAFFY.isUndefined( runEvent )) )
+            {
+              settings.onRemove.call( TOb[x] );
+            }
+            ID[TOb[x].___id] = undefined;
+            TOb.splice( x, 1 );
+          }
+        }
+        ID = {};
+        each( TOb, function ( r, i ) {
+          ID[r.___id] = i;
+        });
+        DBI.dm( new Date() );
+      },
+      query : function ( context ) {
+        // ****************************************
+        // *
+        // * Takes: the context object for a query and either returns a cache result or a new query result
+        // **************************************** 
+        var returnq, cid, results, indexed, limitq, ni;
+
+        if ( settings.cacheSize ) {
+          cid = &#39;&#39;;
+          each( context.filterRaw, function ( r ) {
+            if ( T.isFunction( r ) ){
+              cid = &#39;nocache&#39;;
+              return TAFFY.EXIT;
+            }
+          });
+          if ( cid === &#39;&#39; ){
+            cid = makeCid( T.mergeObj( context,
+              {q : false, run : false, sort : false} ) );
+          }
+        }
+        // Run a new query if there are no results or the run date has been cleared
+        if ( !context.results || !context.run ||
+          (context.run &amp;&amp; DBI.dm() &gt; context.run) )
+        {
+          results = [];
+
+          // check Cache
+
+          if ( settings.cacheSize &amp;&amp; Cache[cid] ){
+
+            Cache[cid].i = CacheCount++;
+            return Cache[cid].results;
+          }
+          else {
+            // if no filter, return DB
+            if ( context.q.length === 0 &amp;&amp; context.index.length === 0 ){
+              each( TOb, function ( r ) {
+                results.push( r );
+              });
+              returnq = results;
+            }
+            else {
+              // use indexes
+
+              indexed = runIndexes( context.index );
+
+              // run filters
+              each( indexed, function ( r ) {
+                // Run filter to see if record matches query
+                if ( context.q.length === 0 || runFilters( r, context.q ) ){
+                  results.push( r );
+                }
+              });
+
+              returnq = results;
+            }
+          }
+
+        }
+        else {
+          // If query exists and run has not been cleared return the cache results
+          returnq = context.results;
+        }
+        // If a custom order array exists and the run has been clear or the sort has been cleared
+        if ( context.order.length &gt; 0 &amp;&amp; (!context.run || !context.sort) ){
+          // order the results
+          returnq = orderByCol( returnq, context.order );
+        }
+
+        // If a limit on the number of results exists and it is less than the returned results, limit results
+        if ( returnq.length &amp;&amp;
+          ((context.limit &amp;&amp; context.limit &lt; returnq.length) ||
+            context.start)
+        ) {
+          limitq = [];
+          each( returnq, function ( r, i ) {
+            if ( !context.start ||
+              (context.start &amp;&amp; (i + 1) &gt;= context.start) )
+            {
+              if ( context.limit ){
+                ni = (context.start) ? (i + 1) - context.start : i;
+                if ( ni &lt; context.limit ){
+                  limitq.push( r );
+                }
+                else if ( ni &gt; context.limit ){
+                  return TAFFY.EXIT;
+                }
+              }
+              else {
+                limitq.push( r );
+              }
+            }
+          });
+          returnq = limitq;
+        }
+
+        // update cache
+        if ( settings.cacheSize &amp;&amp; cid !== &#39;nocache&#39; ){
+          CacheClear++;
+
+          setTimeout( function () {
+            var bCounter, nc;
+            if ( CacheClear &gt;= settings.cacheSize * 2 ){
+              CacheClear = 0;
+              bCounter = CacheCount - settings.cacheSize;
+              nc = {};
+              eachin( function ( r, k ) {
+                if ( r.i &gt;= bCounter ){
+                  nc[k] = r;
+                }
+              });
+              Cache = nc;
+            }
+          }, 0 );
+
+          Cache[cid] = { i : CacheCount++, results : returnq };
+        }
+        return returnq;
+      }
+    };
+
+    root = function () {
+      var iAPI, context;
+      // ****************************************
+      // *
+      // * The root function that gets returned when a new DB is created
+      // * Takes: unlimited filter arguments and creates filters to be run when a query is called
+      // **************************************** 
+      // ****************************************
+      // *
+      // * iAPI is the the method collection valiable when a query has been started by calling dbname
+      // * Certain methods are or are not avaliable once you have started a query such as insert -- you can only insert into root
+      // ****************************************
+      iAPI = TAFFY.mergeObj( TAFFY.mergeObj( API, { insert : undefined } ),
+        { getDBI  : function () { return DBI; },
+          getroot : function ( c ) { return root.call( c ); },
+        context : function ( n ) {
+          // ****************************************
+          // *
+          // * The context contains all the information to manage a query including filters, limits, and sorts
+          // **************************************** 
+          if ( n ){
+            context = TAFFY.mergeObj( context,
+              n.hasOwnProperty(&#39;results&#39;)
+                ? TAFFY.mergeObj( n, { run : new Date(), sort: new Date() })
+                : n
+            );
+          }
+          return context;
+        },
+        extend  : undefined
+      });
+
+      context = (this &amp;&amp; this.q) ? this : {
+        limit     : false,
+        start     : false,
+        q         : [],
+        filterRaw : [],
+        index     : [],
+        order     : [],
+        results   : false,
+        run       : null,
+        sort      : null,
+        settings  : settings
+      };
+      // ****************************************
+      // *
+      // * Call the query method to setup a new query
+      // **************************************** 
+      each( arguments, function ( f ) {
+
+        if ( isIndexable( f ) ){
+          context.index.push( f );
+        }
+        else {
+          context.q.push( returnFilter( f ) );
+        }
+        context.filterRaw.push( f );
+      });
+
+      return iAPI;
+    };
+
+    // ****************************************
+    // *
+    // * If new records have been passed on creation of the DB either as JSON or as an array/object, insert them
+    // **************************************** 
+    TC++;
+    if ( d ){
+      DBI.insert( d );
+    }
+
+    root.insert = DBI.insert;
+
+    root.merge = function ( i, key, runEvent ) {
+      var
+        search      = {},
+        finalSearch = [],
+        obj         = {}
+        ;
+
+      runEvent    = runEvent || false;
+      key         = key      || &#39;id&#39;;
+
+      each( i, function ( o ) {
+        var existingObject;
+        search[key] = o[key];
+        finalSearch.push( o[key] );
+        existingObject = root( search ).first();
+        if ( existingObject ){
+          DBI.update( existingObject.___id, o, runEvent );
+        }
+        else {
+          DBI.insert( o, runEvent );
+        }
+      });
+
+      obj[key] = finalSearch;
+      return root( obj );
+    };
+
+    root.TAFFY = true;
+    root.sort = DBI.sort;
+    // ****************************************
+    // *
+    // * These are the methods that can be accessed on off the root DB function. Example dbname.insert;
+    // **************************************** 
+    root.settings = function ( n ) {
+      // ****************************************
+      // *
+      // * Getting and setting for this DB&#39;s settings/events
+      // **************************************** 
+      if ( n ){
+        settings = TAFFY.mergeObj( settings, n );
+        if ( n.template ){
+
+          root().update( n.template );
+        }
+      }
+      return settings;
+    };
+
+    // ****************************************
+    // *
+    // * These are the methods that can be accessed on off the root DB function. Example dbname.insert;
+    // **************************************** 
+    root.store = function ( n ) {
+      // ****************************************
+      // *
+      // * Setup localstorage for this DB on a given name
+      // * Pull data into the DB as needed
+      // **************************************** 
+      var r = false, i;
+      if ( localStorage ){
+        if ( n ){
+          i = localStorage.getItem( &#39;taffy_&#39; + n );
+          if ( i &amp;&amp; i.length &gt; 0 ){
+            root.insert( i );
+            r = true;
+          }
+          if ( TOb.length &gt; 0 ){
+            setTimeout( function () {
+              localStorage.setItem( &#39;taffy_&#39; + settings.storageName,
+                JSON.stringify( TOb ) );
+            });
+          }
+        }
+        root.settings( {storageName : n} );
+      }
+      return root;
+    };
+
+    // ****************************************
+    // *
+    // * Return root on DB creation and start having fun
+    // **************************************** 
+    return root;
+  };
+  // ****************************************
+  // *
+  // * Sets the global TAFFY object
+  // **************************************** 
+  TAFFY = T;
+
+  // ****************************************
+  // *
+  // * Create public each method
+  // *
+  // ****************************************   
+  T.each = each;
+
+  // ****************************************
+  // *
+  // * Create public eachin method
+  // *
+  // ****************************************   
+  T.eachin = eachin;
+  // ****************************************
+  // *
+  // * Create public extend method
+  // * Add a custom method to the API
+  // *
+  // ****************************************   
+  T.extend = API.extend;
+
+  // ****************************************
+  // *
+  // * Creates TAFFY.EXIT value that can be returned to stop an each loop
+  // *
+  // ****************************************  
+  TAFFY.EXIT = &#39;TAFFYEXIT&#39;;
+
+  // ****************************************
+  // *
+  // * Create public utility mergeObj method
+  // * Return a new object where items from obj2
+  // * have replaced or been added to the items in
+  // * obj1
+  // * Purpose: Used to combine objs
+  // *
+  // ****************************************   
+  TAFFY.mergeObj = function ( ob1, ob2 ) {
+    var c = {};
+    eachin( ob1, function ( v, n ) { c[n] = ob1[n]; });
+    eachin( ob2, function ( v, n ) { c[n] = ob2[n]; });
+    return c;
+  };
+
+  // ****************************************
+  // *
+  // * Create public utility has method
+  // * Returns true if a complex object, array
+  // * or taffy collection contains the material
+  // * provided in the second argument
+  // * Purpose: Used to comare objects
+  // *
+  // ****************************************
+  TAFFY.has = function ( var1, var2 ) {
+
+    var re = false, n;
+
+    if ( (var1.TAFFY) ){
+      re = var1( var2 );
+      if ( re.length &gt; 0 ){
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    else {
+
+      switch ( T.typeOf( var1 ) ){
+        case &#39;object&#39;:
+          if ( T.isObject( var2 ) ){
+            eachin( var2, function ( v, n ) {
+              if ( re === true &amp;&amp; !T.isUndefined( var1[n] ) &amp;&amp;
+                var1.hasOwnProperty( n ) )
+              {
+                re = T.has( var1[n], var2[n] );
+              }
+              else {
+                re = false;
+                return TAFFY.EXIT;
+              }
+            });
+          }
+          else if ( T.isArray( var2 ) ){
+            each( var2, function ( v, n ) {
+              re = T.has( var1, var2[n] );
+              if ( re ){
+                return TAFFY.EXIT;
+              }
+            });
+          }
+          else if ( T.isString( var2 ) ){
+            if ( !TAFFY.isUndefined( var1[var2] ) ){
+              return true;
+            }
+            else {
+              return false;
+            }
+          }
+          return re;
+        case &#39;array&#39;:
+          if ( T.isObject( var2 ) ){
+            each( var1, function ( v, i ) {
+              re = T.has( var1[i], var2 );
+              if ( re === true ){
+                return TAFFY.EXIT;
+              }
+            });
+          }
+          else if ( T.isArray( var2 ) ){
+            each( var2, function ( v2, i2 ) {
+              each( var1, function ( v1, i1 ) {
+                re = T.has( var1[i1], var2[i2] );
+                if ( re === true ){
+                  return TAFFY.EXIT;
+                }
+              });
+              if ( re === true ){
+                return TAFFY.EXIT;
+              }
+            });
+          }
+          else if ( T.isString( var2 ) || T.isNumber( var2 ) ){
+           re = false;
+            for ( n = 0; n &lt; var1.length; n++ ){
+              re = T.has( var1[n], var2 );
+              if ( re ){
+                return true;
+              }
+            }
+          }
+          return re;
+        case &#39;string&#39;:
+          if ( T.isString( var2 ) &amp;&amp; var2 === var1 ){
+            return true;
+          }
+          break;
+        default:
+          if ( T.typeOf( var1 ) === T.typeOf( var2 ) &amp;&amp; var1 === var2 ){
+            return true;
+          }
+          break;
+      }
+    }
+    return false;
+  };
+
+  // ****************************************
+  // *
+  // * Create public utility hasAll method
+  // * Returns true if a complex object, array
+  // * or taffy collection contains the material
+  // * provided in the call - for arrays it must
+  // * contain all the material in each array item
+  // * Purpose: Used to comare objects
+  // *
+  // ****************************************
+  TAFFY.hasAll = function ( var1, var2 ) {
+
+    var T = TAFFY, ar;
+    if ( T.isArray( var2 ) ){
+      ar = true;
+      each( var2, function ( v ) {
+        ar = T.has( var1, v );
+        if ( ar === false ){
+          return TAFFY.EXIT;
+        }
+      });
+      return ar;
+    }
+    else {
+      return T.has( var1, var2 );
+    }
+  };
+
+  // ****************************************
+  // *
+  // * typeOf Fixed in JavaScript as public utility
+  // *
+  // ****************************************
+  TAFFY.typeOf = function ( v ) {
+    var s = typeof v;
+    if ( s === &#39;object&#39; ){
+      if ( v ){
+        if ( typeof v.length === &#39;number&#39; &amp;&amp;
+          !(v.propertyIsEnumerable( &#39;length&#39; )) )
+        {
+          s = &#39;array&#39;;
+        }
+      }
+      else {
+        s = &#39;null&#39;;
+      }
+    }
+    return s;
+  };
+
+  // ****************************************
+  // *
+  // * Create public utility getObjectKeys method
+  // * Returns an array of an objects keys
+  // * Purpose: Used to get the keys for an object
+  // *
+  // ****************************************   
+  TAFFY.getObjectKeys = function ( ob ) {
+    var kA = [];
+    eachin( ob, function ( n, h ) {
+      kA.push( h );
+    });
+    kA.sort();
+    return kA;
+  };
+
+  // ****************************************
+  // *
+  // * Create public utility isSameArray
+  // * Returns an array of an objects keys
+  // * Purpose: Used to get the keys for an object
+  // *
+  // ****************************************   
+  TAFFY.isSameArray = function ( ar1, ar2 ) {
+    return (TAFFY.isArray( ar1 ) &amp;&amp; TAFFY.isArray( ar2 ) &amp;&amp;
+      ar1.join( &#39;,&#39; ) === ar2.join( &#39;,&#39; )) ? true : false;
+  };
+
+  // ****************************************
+  // *
+  // * Create public utility isSameObject method
+  // * Returns true if objects contain the same
+  // * material or false if they do not
+  // * Purpose: Used to comare objects
+  // *
+  // ****************************************   
+  TAFFY.isSameObject = function ( ob1, ob2 ) {
+    var T = TAFFY, rv = true;
+
+    if ( T.isObject( ob1 ) &amp;&amp; T.isObject( ob2 ) ){
+      if ( T.isSameArray( T.getObjectKeys( ob1 ),
+        T.getObjectKeys( ob2 ) ) )
+      {
+        eachin( ob1, function ( v, n ) {
+          if ( ! ( (T.isObject( ob1[n] ) &amp;&amp; T.isObject( ob2[n] ) &amp;&amp;
+            T.isSameObject( ob1[n], ob2[n] )) ||
+            (T.isArray( ob1[n] ) &amp;&amp; T.isArray( ob2[n] ) &amp;&amp;
+              T.isSameArray( ob1[n], ob2[n] )) || (ob1[n] === ob2[n]) )
+          ) {
+            rv = false;
+            return TAFFY.EXIT;
+          }
+        });
+      }
+      else {
+        rv = false;
+      }
+    }
+    else {
+      rv = false;
+    }
+    return rv;
+  };
+
+  // ****************************************
+  // *
+  // * Create public utility is[DataType] methods
+  // * Return true if obj is datatype, false otherwise
+  // * Purpose: Used to determine if arguments are of certain data type
+  // *
+  // * mmikowski 2012-08-06 refactored to make much less &quot;magical&quot;:
+  // *   fewer closures and passes jslint
+  // *
+  // ****************************************
+
+  typeList = [
+    &#39;String&#39;,  &#39;Number&#39;, &#39;Object&#39;,   &#39;Array&#39;,
+    &#39;Boolean&#39;, &#39;Null&#39;,   &#39;Function&#39;, &#39;Undefined&#39;
+  ];
+
+  makeTest = function ( thisKey ) {
+    return function ( data ) {
+      return TAFFY.typeOf( data ) === thisKey.toLowerCase() ? true : false;
+    };
+  };
+
+  for ( idx = 0; idx &lt; typeList.length; idx++ ){
+    typeKey = typeList[idx];
+    TAFFY[&#39;is&#39; + typeKey] = makeTest( typeKey );
+  }
+}</pre>
+
+<p>}());</p>
+
+<p>if ( typeof(exports) === &#39;object&#39; ){</p>
+
+<pre>exports.taffy = TAFFY;</pre>
+
+<p>}</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

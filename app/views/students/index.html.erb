@@ -1,0 +1,30 @@
+<h1>Listing Students</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+
+      <tr>
+	<td><%= student.email %></td>
+	<td><%= link_to 'Edit', {:controller => :students, :action => 'edit', :id => student.id, :course_id=> params[:course_id]}, :class=>"btn btn-lg btn-link" %></td>
+	<td><%= button_to "Destroy", {:controller => :students, :action => 'destroy', :id => student.id, :course_id => params[:course_id]}, :class=>"btn btn-danger" ,:method => :delete %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "Add a student", {:controller => :students, :action => 'new', :course_id=> params[:course_id]}, :class=>"btn btn-lg btn-link" %>
+<%= link_to "Back to course page", course_path(:id=>params[:course_id]), {:class=>"btn btn-lg btn-link"} %>
+
+<%= params.inspect %>

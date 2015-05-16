@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>AddGroupToCourses.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../README_rdoc.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/assignments_js_coffee.html">assignments.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/courses_js_coffee.html">courses.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/flowcharts_js_coffee.html">flowcharts.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/grades_js_coffee.html">grades.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/home_js_coffee.html">home.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/sessions_js_coffee.html">sessions.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/students_js_coffee.html">students.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/taffy_js.html">taffy.js</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/users_js_coffee.html">users.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/view_js_coffee.html">view.js.coffee</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/assignments_css_scss.html">assignments.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/courses_css_scss.html">courses.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/flowcharts_css_scss.html">flowcharts.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/grades_css_scss.html">grades.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/home_css_scss.html">home.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/scaffolds_css_scss.html">scaffolds.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/sessions_css_scss.html">sessions.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/students_css_scss.html">students.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/users_css_scss.html">users.css.scss</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/view_css_scss.html">view.css.scss</a>
+  
+    <li class="file"><a href="../app/views/users/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li class="file"><a href="../config_ru.html">config.ru</a>
+  
+    <li class="file"><a href="../db/sample-data/assignments_csv.html">assignments.csv</a>
+  
+    <li class="file"><a href="../db/sample-data/tag_assignments_csv.html">tag_assignments.csv</a>
+  
+    <li class="file"><a href="../db/sample-data/tags_csv.html">tags.csv</a>
+  
+    <li class="file"><a href="../doc/ActiveRecord_html.html">ActiveRecord.html</a>
+  
+    <li class="file"><a href="../doc/ActiveSupport_html.html">ActiveSupport.html</a>
+  
+    <li class="file"><a href="../doc/ActiveSupport/TestCase_html.html">TestCase.html</a>
+  
+    <li class="file"><a href="../doc/AddAssignmentIdToGrades_html.html">AddAssignmentIdToGrades.html</a>
+  
+    <li class="file"><a href="../doc/AddAssignmentsToCourses_html.html">AddAssignmentsToCourses.html</a>
+  
+    <li class="file"><a href="../doc/AddGroupToAssignments_html.html">AddGroupToAssignments.html</a>
+  
+    <li class="file"><a href="../doc/AddGroupToCourses_html.html">AddGroupToCourses.html</a>
+  
+    <li class="file"><a href="../doc/AddNodeIdToAssignments_html.html">AddNodeIdToAssignments.html</a>
+  
+    <li class="file"><a href="../doc/AddNodesLinksToCourses_html.html">AddNodesLinksToCourses.html</a>
+  
+    <li class="file"><a href="../doc/AddPointsToAssignments_html.html">AddPointsToAssignments.html</a>
+  
+    <li class="file"><a href="../doc/AddTagsToAssignments_html.html">AddTagsToAssignments.html</a>
+  
+    <li class="file"><a href="../doc/AddUserIdToCourses_html.html">AddUserIdToCourses.html</a>
+  
+    <li class="file"><a href="../doc/ApplicationController_html.html">ApplicationController.html</a>
+  
+    <li class="file"><a href="../doc/ApplicationHelper_html.html">ApplicationHelper.html</a>
+  
+    <li class="file"><a href="../doc/Assignment_html.html">Assignment.html</a>
+  
+    <li class="file"><a href="../doc/AssignmentTest_html.html">AssignmentTest.html</a>
+  
+    <li class="file"><a href="../doc/AssignmentsController_html.html">AssignmentsController.html</a>
+  
+    <li class="file"><a href="../doc/AssignmentsControllerTest_html.html">AssignmentsControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/AssignmentsHelper_html.html">AssignmentsHelper.html</a>
+  
+    <li class="file"><a href="../doc/AssignmentsHelperTest_html.html">AssignmentsHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/Course_html.html">Course.html</a>
+  
+    <li class="file"><a href="../doc/CourseTest_html.html">CourseTest.html</a>
+  
+    <li class="file"><a href="../doc/CoursesController_html.html">CoursesController.html</a>
+  
+    <li class="file"><a href="../doc/CoursesControllerTest_html.html">CoursesControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/CoursesHelper_html.html">CoursesHelper.html</a>
+  
+    <li class="file"><a href="../doc/CoursesHelperTest_html.html">CoursesHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/CreateAssignments_html.html">CreateAssignments.html</a>
+  
+    <li class="file"><a href="../doc/CreateCourses_html.html">CreateCourses.html</a>
+  
+    <li class="file"><a href="../doc/CreateGrades_html.html">CreateGrades.html</a>
+  
+    <li class="file"><a href="../doc/CreateLinks_html.html">CreateLinks.html</a>
+  
+    <li class="file"><a href="../doc/CreateSessions_html.html">CreateSessions.html</a>
+  
+    <li class="file"><a href="../doc/CreateStudents_html.html">CreateStudents.html</a>
+  
+    <li class="file"><a href="../doc/CreateTags_html.html">CreateTags.html</a>
+  
+    <li class="file"><a href="../doc/CreateUsers_html.html">CreateUsers.html</a>
+  
+    <li class="file"><a href="../doc/FlowchartTest_html.html">FlowchartTest.html</a>
+  
+    <li class="file"><a href="../doc/FlowchartsControllerTest_html.html">FlowchartsControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/FlowchartsHelper_html.html">FlowchartsHelper.html</a>
+  
+    <li class="file"><a href="../doc/FlowchartsHelperTest_html.html">FlowchartsHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/Flowghost_html.html">Flowghost.html</a>
+  
+    <li class="file"><a href="../doc/Flowghost/Application_html.html">Application.html</a>
+  
+    <li class="file"><a href="../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="../doc/Grade_html.html">Grade.html</a>
+  
+    <li class="file"><a href="../doc/GradeTest_html.html">GradeTest.html</a>
+  
+    <li class="file"><a href="../doc/GradesController_html.html">GradesController.html</a>
+  
+    <li class="file"><a href="../doc/GradesControllerTest_html.html">GradesControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/GradesHelper_html.html">GradesHelper.html</a>
+  
+    <li class="file"><a href="../doc/GradesHelperTest_html.html">GradesHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/HomeController_html.html">HomeController.html</a>
+  
+    <li class="file"><a href="../doc/HomeControllerTest_html.html">HomeControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/HomeHelper_html.html">HomeHelper.html</a>
+  
+    <li class="file"><a href="../doc/HomeHelperTest_html.html">HomeHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/Link_html.html">Link.html</a>
+  
+    <li class="file"><a href="../doc/LinkTest_html.html">LinkTest.html</a>
+  
+    <li class="file"><a href="../doc/Logger_html.html">Logger.html</a>
+  
+    <li class="file"><a href="../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../doc/README_rdoc_html.html">README_rdoc.html</a>
+  
+    <li class="file"><a href="../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../doc/RemoveAssignmentFromCourses_html.html">RemoveAssignmentFromCourses.html</a>
+  
+    <li class="file"><a href="../doc/RemoveAssignmentNameFromGrades_html.html">RemoveAssignmentNameFromGrades.html</a>
+  
+    <li class="file"><a href="../doc/RemoveAssignmentsFromCourses_html.html">RemoveAssignmentsFromCourses.html</a>
+  
+    <li class="file"><a href="../doc/RemoveGroupFromCourses_html.html">RemoveGroupFromCourses.html</a>
+  
+    <li class="file"><a href="../doc/RemoveLinksFromCourses_html.html">RemoveLinksFromCourses.html</a>
+  
+    <li class="file"><a href="../doc/RemoveNodeIdsFromAssignments_html.html">RemoveNodeIdsFromAssignments.html</a>
+  
+    <li class="file"><a href="../doc/RemoveNodesFromCourses_html.html">RemoveNodesFromCourses.html</a>
+  
+    <li class="file"><a href="../doc/RemoveTags_html.html">RemoveTags.html</a>
+  
+    <li class="file"><a href="../doc/RenameSourceIdToTarget_html.html">RenameSourceIdToTarget.html</a>
+  
+    <li class="file"><a href="../doc/RenameTargetIdToTarget_html.html">RenameTargetIdToTarget.html</a>
+  
+    <li class="file"><a href="../doc/Session_html.html">Session.html</a>
+  
+    <li class="file"><a href="../doc/SessionTest_html.html">SessionTest.html</a>
+  
+    <li class="file"><a href="../doc/SessionsController_html.html">SessionsController.html</a>
+  
+    <li class="file"><a href="../doc/SessionsControllerTest_html.html">SessionsControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/SessionsHelper_html.html">SessionsHelper.html</a>
+  
+    <li class="file"><a href="../doc/SessionsHelperTest_html.html">SessionsHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/Student_html.html">Student.html</a>
+  
+    <li class="file"><a href="../doc/StudentMailer_html.html">StudentMailer.html</a>
+  
+    <li class="file"><a href="../doc/StudentMailerTest_html.html">StudentMailerTest.html</a>
+  
+    <li class="file"><a href="../doc/StudentTest_html.html">StudentTest.html</a>
+  
+    <li class="file"><a href="../doc/StudentsController_html.html">StudentsController.html</a>
+  
+    <li class="file"><a href="../doc/StudentsControllerTest_html.html">StudentsControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/StudentsHelper_html.html">StudentsHelper.html</a>
+  
+    <li class="file"><a href="../doc/StudentsHelperTest_html.html">StudentsHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/Tag_html.html">Tag.html</a>
+  
+    <li class="file"><a href="../doc/TagAssignment_html.html">TagAssignment.html</a>
+  
+    <li class="file"><a href="../doc/TagAssignmentTest_html.html">TagAssignmentTest.html</a>
+  
+    <li class="file"><a href="../doc/TagTest_html.html">TagTest.html</a>
+  
+    <li class="file"><a href="../doc/User_html.html">User.html</a>
+  
+    <li class="file"><a href="../doc/UserTest_html.html">UserTest.html</a>
+  
+    <li class="file"><a href="../doc/UsersController_html.html">UsersController.html</a>
+  
+    <li class="file"><a href="../doc/UsersControllerTest_html.html">UsersControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/UsersHelper_html.html">UsersHelper.html</a>
+  
+    <li class="file"><a href="../doc/UsersHelperTest_html.html">UsersHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/ViewControllerTest_html.html">ViewControllerTest.html</a>
+  
+    <li class="file"><a href="../doc/ViewHelper_html.html">ViewHelper.html</a>
+  
+    <li class="file"><a href="../doc/ViewHelperTest_html.html">ViewHelperTest.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/application_js_html.html">application_js.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/assignments_js_coffee_html.html">assignments_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/courses_js_coffee_html.html">courses_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/flowcharts_js_coffee_html.html">flowcharts_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/grades_js_coffee_html.html">grades_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/home_js_coffee_html.html">home_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/sessions_js_coffee_html.html">sessions_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/students_js_coffee_html.html">students_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/taffy_js_html.html">taffy_js.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/users_js_coffee_html.html">users_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/javascripts/view_js_coffee_html.html">view_js_coffee.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/application_css_html.html">application_css.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/assignments_css_scss_html.html">assignments_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/courses_css_scss_html.html">courses_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/flowcharts_css_scss_html.html">flowcharts_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/grades_css_scss_html.html">grades_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/home_css_scss_html.html">home_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/scaffolds_css_scss_html.html">scaffolds_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/sessions_css_scss_html.html">sessions_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/students_css_scss_html.html">students_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/users_css_scss_html.html">users_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/assets/stylesheets/view_css_scss_html.html">view_css_scss.html</a>
+  
+    <li class="file"><a href="../doc/app/views/users/show_json_jbuilder_html.html">show_json_jbuilder.html</a>
+  
+    <li class="file"><a href="../doc/config_ru_html.html">config_ru.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/db/sample-data/assignments_csv_html.html">assignments_csv.html</a>
+  
+    <li class="file"><a href="../doc/db/sample-data/tag_assignments_csv_html.html">tag_assignments_csv.html</a>
+  
+    <li class="file"><a href="../doc/db/sample-data/tags_csv_html.html">tags_csv.html</a>
+  
+    <li class="file"><a href="../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/lib/tasks/loader_rake_html.html">loader_rake.html</a>
+  
+    <li class="file"><a href="../doc/log/development_log_html.html">development_log.html</a>
+  
+    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../lib/tasks/loader_rake.html">loader.rake</a>
+  
+    <li class="file"><a href="../log/development_log.html">development.log</a>
+  
+    <li class="file"><a href="../public/404_html.html">404.html</a>
+  
+    <li class="file"><a href="../public/422_html.html">422.html</a>
+  
+    <li class="file"><a href="../public/500_html.html">500.html</a>
+  
+    <li class="file"><a href="../public/assets/application-8b7088ec7a1a59ff2af2a9898942a817_js.html">application-8b7088ec7a1a59ff2af2a9898942a817.js</a>
+  
+    <li class="file"><a href="../public/assets/application-d577a2de9d2fc085ee91cb19d8b684b3_css.html">application-d577a2de9d2fc085ee91cb19d8b684b3.css</a>
+  
+    <li class="file"><a href="../public/assets/manifest-95a7d7a85a9808fdbcc3205d1f70b686_json.html">manifest-95a7d7a85a9808fdbcc3205d1f70b686.json</a>
+  
+    <li class="file"><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li class="file"><a href="../public/robots_txt.html">robots</a>
+  
+    <li class="file"><a href="../public/taffy_js.html">taffy.js</a>
+  
+    <li class="file"><a href="../vendor/assets/javascripts/taffy-min_js.html">taffy-min.js</a>
+  
+    <li class="file"><a href="../vendor/assets/javascripts/taffy_js.html">taffy.js</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="../ActiveSupport.html">ActiveSupport</a>
+  
+    <li><a href="../ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
+  
+    <li><a href="../AddAssignmentIdToGrades.html">AddAssignmentIdToGrades</a>
+  
+    <li><a href="../AddAssignmentsToCourses.html">AddAssignmentsToCourses</a>
+  
+    <li><a href="../AddGroupToAssignments.html">AddGroupToAssignments</a>
+  
+    <li><a href="../AddGroupToCourses.html">AddGroupToCourses</a>
+  
+    <li><a href="../AddNodeIdToAssignments.html">AddNodeIdToAssignments</a>
+  
+    <li><a href="../AddNodesLinksToCourses.html">AddNodesLinksToCourses</a>
+  
+    <li><a href="../AddPointsToAssignments.html">AddPointsToAssignments</a>
+  
+    <li><a href="../AddTagsToAssignments.html">AddTagsToAssignments</a>
+  
+    <li><a href="../AddUserIdToCourses.html">AddUserIdToCourses</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Assignment.html">Assignment</a>
+  
+    <li><a href="../AssignmentTest.html">AssignmentTest</a>
+  
+    <li><a href="../AssignmentsController.html">AssignmentsController</a>
+  
+    <li><a href="../AssignmentsControllerTest.html">AssignmentsControllerTest</a>
+  
+    <li><a href="../AssignmentsHelper.html">AssignmentsHelper</a>
+  
+    <li><a href="../AssignmentsHelperTest.html">AssignmentsHelperTest</a>
+  
+    <li><a href="../Course.html">Course</a>
+  
+    <li><a href="../CourseTest.html">CourseTest</a>
+  
+    <li><a href="../CoursesController.html">CoursesController</a>
+  
+    <li><a href="../CoursesControllerTest.html">CoursesControllerTest</a>
+  
+    <li><a href="../CoursesHelper.html">CoursesHelper</a>
+  
+    <li><a href="../CoursesHelperTest.html">CoursesHelperTest</a>
+  
+    <li><a href="../CreateAssignments.html">CreateAssignments</a>
+  
+    <li><a href="../CreateCourses.html">CreateCourses</a>
+  
+    <li><a href="../CreateGrades.html">CreateGrades</a>
+  
+    <li><a href="../CreateLinks.html">CreateLinks</a>
+  
+    <li><a href="../CreateSessions.html">CreateSessions</a>
+  
+    <li><a href="../CreateStudents.html">CreateStudents</a>
+  
+    <li><a href="../CreateTags.html">CreateTags</a>
+  
+    <li><a href="../CreateUsers.html">CreateUsers</a>
+  
+    <li><a href="../FlowchartTest.html">FlowchartTest</a>
+  
+    <li><a href="../FlowchartsControllerTest.html">FlowchartsControllerTest</a>
+  
+    <li><a href="../FlowchartsHelper.html">FlowchartsHelper</a>
+  
+    <li><a href="../FlowchartsHelperTest.html">FlowchartsHelperTest</a>
+  
+    <li><a href="../Flowghost.html">Flowghost</a>
+  
+    <li><a href="../Flowghost/Application.html">Flowghost::Application</a>
+  
+    <li><a href="../Grade.html">Grade</a>
+  
+    <li><a href="../GradeTest.html">GradeTest</a>
+  
+    <li><a href="../GradesController.html">GradesController</a>
+  
+    <li><a href="../GradesControllerTest.html">GradesControllerTest</a>
+  
+    <li><a href="../GradesHelper.html">GradesHelper</a>
+  
+    <li><a href="../GradesHelperTest.html">GradesHelperTest</a>
+  
+    <li><a href="../HomeController.html">HomeController</a>
+  
+    <li><a href="../HomeControllerTest.html">HomeControllerTest</a>
+  
+    <li><a href="../HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="../HomeHelperTest.html">HomeHelperTest</a>
+  
+    <li><a href="../Link.html">Link</a>
+  
+    <li><a href="../LinkTest.html">LinkTest</a>
+  
+    <li><a href="../Logger.html">Logger</a>
+  
+    <li><a href="../RemoveAssignmentFromCourses.html">RemoveAssignmentFromCourses</a>
+  
+    <li><a href="../RemoveAssignmentNameFromGrades.html">RemoveAssignmentNameFromGrades</a>
+  
+    <li><a href="../RemoveAssignmentsFromCourses.html">RemoveAssignmentsFromCourses</a>
+  
+    <li><a href="../RemoveGroupFromCourses.html">RemoveGroupFromCourses</a>
+  
+    <li><a href="../RemoveLinksFromCourses.html">RemoveLinksFromCourses</a>
+  
+    <li><a href="../RemoveNodeIdsFromAssignments.html">RemoveNodeIdsFromAssignments</a>
+  
+    <li><a href="../RemoveNodesFromCourses.html">RemoveNodesFromCourses</a>
+  
+    <li><a href="../RemoveTags.html">RemoveTags</a>
+  
+    <li><a href="../RenameSourceIdToTarget.html">RenameSourceIdToTarget</a>
+  
+    <li><a href="../RenameTargetIdToTarget.html">RenameTargetIdToTarget</a>
+  
+    <li><a href="../Session.html">Session</a>
+  
+    <li><a href="../SessionTest.html">SessionTest</a>
+  
+    <li><a href="../SessionsController.html">SessionsController</a>
+  
+    <li><a href="../SessionsControllerTest.html">SessionsControllerTest</a>
+  
+    <li><a href="../SessionsHelper.html">SessionsHelper</a>
+  
+    <li><a href="../SessionsHelperTest.html">SessionsHelperTest</a>
+  
+    <li><a href="../Student.html">Student</a>
+  
+    <li><a href="../StudentMailer.html">StudentMailer</a>
+  
+    <li><a href="../StudentMailerTest.html">StudentMailerTest</a>
+  
+    <li><a href="../StudentTest.html">StudentTest</a>
+  
+    <li><a href="../StudentsController.html">StudentsController</a>
+  
+    <li><a href="../StudentsControllerTest.html">StudentsControllerTest</a>
+  
+    <li><a href="../StudentsHelper.html">StudentsHelper</a>
+  
+    <li><a href="../StudentsHelperTest.html">StudentsHelperTest</a>
+  
+    <li><a href="../Tag.html">Tag</a>
+  
+    <li><a href="../TagAssignment.html">TagAssignment</a>
+  
+    <li><a href="../TagAssignmentTest.html">TagAssignmentTest</a>
+  
+    <li><a href="../TagTest.html">TagTest</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UserTest.html">UserTest</a>
+  
+    <li><a href="../UsersController.html">UsersController</a>
+  
+    <li><a href="../UsersControllerTest.html">UsersControllerTest</a>
+  
+    <li><a href="../UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="../UsersHelperTest.html">UsersHelperTest</a>
+  
+    <li><a href="../ViewControllerTest.html">ViewControllerTest</a>
+  
+    <li><a href="../ViewHelper.html">ViewHelper</a>
+  
+    <li><a href="../ViewHelperTest.html">ViewHelperTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&gt;</p>
+
+<p>&lt;title&gt;class <a
+href="../AddGroupToCourses.html">AddGroupToCourses</a> - RDoc
+Documentation&lt;/title&gt;</p>
+
+<p>&lt;link type=“text/css” media=“screen” href=“./rdoc.css”
+rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;./&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script type=“text/javascript” charset=“utf-8”
+src=“./js/jquery.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/navigation.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search_index.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/searcher.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body id=“top” class=“class”&gt; &lt;nav id=“metadata”&gt;</p>
+
+<pre>&lt;nav id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;
+  &lt;a href=&quot;./index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/h3&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;nav id=&quot;search-section&quot; class=&quot;section project-section&quot; class=&quot;initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; id=&quot;search-field&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/h3&gt;
+&lt;/form&gt;
+
+&lt;ul id=&quot;search-results&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;div id=&quot;file-metadata&quot;&gt;
+  &lt;nav id=&quot;file-list-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Defined In&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;db/migrate/20131015231352_add_group_to_courses.rb
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;class-metadata&quot;&gt;
+
+  &lt;nav id=&quot;parent-class-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Parent&lt;/h3&gt;
+
+&lt;p class=&quot;link&quot;&gt;ActiveRecord::Migration</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;!-- Method Quickref --&gt;</pre>
+
+<p>&lt;nav id=“method-list-section” class=“section”&gt;</p>
+
+<pre>&lt;h3 class=&quot;section-header&quot;&gt;Methods&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-change&quot;&gt;#change&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;nav id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Pages&lt;/h3&gt;
+
+&lt;ul&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Gemfile.html&quot;&gt;Gemfile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Gemfile_lock.html&quot;&gt;Gemfile.lock&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./README_md.html&quot;&gt;README&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./README_rdoc.html&quot;&gt;README&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Rakefile.html&quot;&gt;Rakefile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/application_js.html&quot;&gt;application.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/assignments_js_coffee.html&quot;&gt;assignments.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/courses_js_coffee.html&quot;&gt;courses.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/flowcharts_js_coffee.html&quot;&gt;flowcharts.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/grades_js_coffee.html&quot;&gt;grades.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/home_js_coffee.html&quot;&gt;home.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/sessions_js_coffee.html&quot;&gt;sessions.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/students_js_coffee.html&quot;&gt;students.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/taffy_js.html&quot;&gt;taffy.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/users_js_coffee.html&quot;&gt;users.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/javascripts/view_js_coffee.html&quot;&gt;view.js.coffee&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/application_css.html&quot;&gt;application.css&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/assignments_css_scss.html&quot;&gt;assignments.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/courses_css_scss.html&quot;&gt;courses.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/flowcharts_css_scss.html&quot;&gt;flowcharts.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/grades_css_scss.html&quot;&gt;grades.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/home_css_scss.html&quot;&gt;home.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/scaffolds_css_scss.html&quot;&gt;scaffolds.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/sessions_css_scss.html&quot;&gt;sessions.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/students_css_scss.html&quot;&gt;students.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/users_css_scss.html&quot;&gt;users.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/assets/stylesheets/view_css_scss.html&quot;&gt;view.css.scss&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./app/views/users/show_json_jbuilder.html&quot;&gt;show.json.jbuilder&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./config_ru.html&quot;&gt;config.ru&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./db/sample-data/assignments_csv.html&quot;&gt;assignments.csv&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./db/sample-data/tag_assignments_csv.html&quot;&gt;tag_assignments.csv&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./db/sample-data/tags_csv.html&quot;&gt;tags.csv&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./doc/created_rid.html&quot;&gt;created.rid&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./lib/tasks/loader_rake.html&quot;&gt;loader.rake&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./log/development_log.html&quot;&gt;development.log&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/404_html.html&quot;&gt;404.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/422_html.html&quot;&gt;422.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/500_html.html&quot;&gt;500.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/assets/application-8b7088ec7a1a59ff2af2a9898942a817_js.html&quot;&gt;application-8b7088ec7a1a59ff2af2a9898942a817.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/assets/application-d577a2de9d2fc085ee91cb19d8b684b3_css.html&quot;&gt;application-d577a2de9d2fc085ee91cb19d8b684b3.css&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/assets/manifest-95a7d7a85a9808fdbcc3205d1f70b686_json.html&quot;&gt;manifest-95a7d7a85a9808fdbcc3205d1f70b686.json&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/favicon_ico.html&quot;&gt;favicon.ico&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/robots_txt.html&quot;&gt;robots&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./public/taffy_js.html&quot;&gt;taffy.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./vendor/assets/javascripts/taffy-min_js.html&quot;&gt;taffy-min.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./vendor/assets/javascripts/taffy_js.html&quot;&gt;taffy.js&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>  &lt;nav id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Class and Module Index&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ActiveRecord.html&quot;&gt;ActiveRecord&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ActiveSupport.html&quot;&gt;ActiveSupport&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ActiveSupport/TestCase.html&quot;&gt;ActiveSupport::TestCase&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddAssignmentIdToGrades.html&quot;&gt;AddAssignmentIdToGrades&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddAssignmentsToCourses.html&quot;&gt;AddAssignmentsToCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddGroupToAssignments.html&quot;&gt;AddGroupToAssignments&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddGroupToCourses.html&quot;&gt;AddGroupToCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddNodeIdToAssignments.html&quot;&gt;AddNodeIdToAssignments&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddNodesLinksToCourses.html&quot;&gt;AddNodesLinksToCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddPointsToAssignments.html&quot;&gt;AddPointsToAssignments&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddTagsToAssignments.html&quot;&gt;AddTagsToAssignments&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AddUserIdToCourses.html&quot;&gt;AddUserIdToCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ApplicationController.html&quot;&gt;ApplicationController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ApplicationHelper.html&quot;&gt;ApplicationHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Assignment.html&quot;&gt;Assignment&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AssignmentTest.html&quot;&gt;AssignmentTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AssignmentsController.html&quot;&gt;AssignmentsController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AssignmentsControllerTest.html&quot;&gt;AssignmentsControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AssignmentsHelper.html&quot;&gt;AssignmentsHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./AssignmentsHelperTest.html&quot;&gt;AssignmentsHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Course.html&quot;&gt;Course&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CourseTest.html&quot;&gt;CourseTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CoursesController.html&quot;&gt;CoursesController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CoursesControllerTest.html&quot;&gt;CoursesControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CoursesHelper.html&quot;&gt;CoursesHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CoursesHelperTest.html&quot;&gt;CoursesHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateAssignments.html&quot;&gt;CreateAssignments&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateCourses.html&quot;&gt;CreateCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateGrades.html&quot;&gt;CreateGrades&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateLinks.html&quot;&gt;CreateLinks&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateSessions.html&quot;&gt;CreateSessions&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateStudents.html&quot;&gt;CreateStudents&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateTags.html&quot;&gt;CreateTags&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CreateUsers.html&quot;&gt;CreateUsers&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./FlowchartTest.html&quot;&gt;FlowchartTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./FlowchartsControllerTest.html&quot;&gt;FlowchartsControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./FlowchartsHelper.html&quot;&gt;FlowchartsHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./FlowchartsHelperTest.html&quot;&gt;FlowchartsHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Flowghost.html&quot;&gt;Flowghost&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Flowghost/Application.html&quot;&gt;Flowghost::Application&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Grade.html&quot;&gt;Grade&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./GradeTest.html&quot;&gt;GradeTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./GradesController.html&quot;&gt;GradesController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./GradesControllerTest.html&quot;&gt;GradesControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./GradesHelper.html&quot;&gt;GradesHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./GradesHelperTest.html&quot;&gt;GradesHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./HomeController.html&quot;&gt;HomeController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./HomeControllerTest.html&quot;&gt;HomeControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./HomeHelper.html&quot;&gt;HomeHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./HomeHelperTest.html&quot;&gt;HomeHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Link.html&quot;&gt;Link&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./LinkTest.html&quot;&gt;LinkTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Logger.html&quot;&gt;Logger&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveAssignmentFromCourses.html&quot;&gt;RemoveAssignmentFromCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveAssignmentNameFromGrades.html&quot;&gt;RemoveAssignmentNameFromGrades&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveAssignmentsFromCourses.html&quot;&gt;RemoveAssignmentsFromCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveGroupFromCourses.html&quot;&gt;RemoveGroupFromCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveLinksFromCourses.html&quot;&gt;RemoveLinksFromCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveNodeIdsFromAssignments.html&quot;&gt;RemoveNodeIdsFromAssignments&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveNodesFromCourses.html&quot;&gt;RemoveNodesFromCourses&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RemoveTags.html&quot;&gt;RemoveTags&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RenameSourceIdToTarget.html&quot;&gt;RenameSourceIdToTarget&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./RenameTargetIdToTarget.html&quot;&gt;RenameTargetIdToTarget&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Session.html&quot;&gt;Session&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./SessionTest.html&quot;&gt;SessionTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./SessionsController.html&quot;&gt;SessionsController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./SessionsControllerTest.html&quot;&gt;SessionsControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./SessionsHelper.html&quot;&gt;SessionsHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./SessionsHelperTest.html&quot;&gt;SessionsHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Student.html&quot;&gt;Student&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./StudentMailer.html&quot;&gt;StudentMailer&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./StudentMailerTest.html&quot;&gt;StudentMailerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./StudentTest.html&quot;&gt;StudentTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./StudentsController.html&quot;&gt;StudentsController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./StudentsControllerTest.html&quot;&gt;StudentsControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./StudentsHelper.html&quot;&gt;StudentsHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./StudentsHelperTest.html&quot;&gt;StudentsHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Tag.html&quot;&gt;Tag&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./TagAssignment.html&quot;&gt;TagAssignment&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./TagAssignmentTest.html&quot;&gt;TagAssignmentTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./TagTest.html&quot;&gt;TagTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./User.html&quot;&gt;User&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./UserTest.html&quot;&gt;UserTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./UsersController.html&quot;&gt;UsersController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./UsersControllerTest.html&quot;&gt;UsersControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./UsersHelper.html&quot;&gt;UsersHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./UsersHelperTest.html&quot;&gt;UsersHelperTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ViewControllerTest.html&quot;&gt;ViewControllerTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ViewHelper.html&quot;&gt;ViewHelper&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./ViewHelperTest.html&quot;&gt;ViewHelperTest&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;div id=“documentation”&gt;</p>
+
+<pre>&lt;h1 class=&quot;class&quot;&gt;class AddGroupToCourses&lt;/h1&gt;
+
+&lt;div id=&quot;description&quot; class=&quot;description&quot;&gt;
+
+&lt;/div&gt;&lt;!-- description --&gt;
+
+&lt;section id=&quot;5Buntitled-5D&quot; class=&quot;documentation-section&quot;&gt;
+
+  &lt;!-- Methods --&gt;
+
+   &lt;section id=&quot;public-instance-5Buntitled-5D-method-details&quot; class=&quot;method-section section&quot;&gt;
+    &lt;h3 class=&quot;section-header&quot;&gt;Public Instance Methods&lt;/h3&gt;
+
+    &lt;div id=&quot;method-i-change&quot; class=&quot;method-detail &quot;&gt;
+
+      &lt;div class=&quot;method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;change&lt;/span&gt;&lt;span
+          class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+        &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+        &lt;div class=&quot;method-source-code&quot; id=&quot;change-source&quot;&gt;
+          &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File db/migrate/20131015231352_add_group_to_courses.rb, line 2&lt;/span&gt;
+</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;change&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;add_column&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;:courses&lt;/span&gt;, &lt;span class=&quot;ruby-value&quot;&gt;:group&lt;/span&gt;, &lt;span class=&quot;ruby-value&quot;&gt;:integer&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>        &lt;/div&gt;&lt;!-- change-source --&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;&lt;!-- change-method --&gt;
+
+  &lt;/section&gt;&lt;!-- public-instance-method-details --&gt;
+
+&lt;/section&gt;&lt;!-- 5Buntitled-5D --&gt;</pre>
+
+<p>&lt;/div&gt;&lt;!– documentation –&gt;</p>
+
+<p>&lt;footer id=“validator-badges”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt; 4.0.0.
+&lt;p&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish Rdoc Generator&lt;/a&gt; 3.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

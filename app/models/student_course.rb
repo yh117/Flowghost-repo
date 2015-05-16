@@ -1,0 +1,3 @@
+class StudentCourse < Course
+
+end

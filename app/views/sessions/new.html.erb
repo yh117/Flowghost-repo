@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="col-md-4"></div>
+	 <div class="col-md-4">
+	 	<h1>Sign in to FlowGhost</h1>
+		<%=render 'form'%>
+		<p>Don't have an account?  <%=link_to "Student sign up!", :controller=>"student_users", :action=>"new"%></p>
+		<p> <%=link_to "Instructor sign up", :controller=>"instructor_users", :action=>"new"%></p>
+
+	</div>
+	<div class="col-md-4"></div>
+</div>

@@ -1,0 +1,28 @@
+<style>
+a:link  {color:#000000; background-color:transparent}
+a:visited {color:#000000; background-color:transparent}
+</style>
+<div style="align:left;">
+<table border="1" style="width:100%" class="table table-hover">
+	<tr style="background-color:#99bbbb; width:100px;text-align:top;">
+		<% @csv_object_now[0].each do |s| %>
+		<th><%= s %></th>
+		<% end %>
+	</tr>
+
+<% row_index = 0 %>
+<% @csv_object_now.each do |row| %>
+  <% if row_index > 1  %>
+	<tr style="width:100px;text-align:top;">
+		<% row.each do |c| %>
+		<td style="background-color:#ffff99;text-align:center;"><%= c %></td>
+		<% end %>
+		<td><%= button_to 'edit', courses_editStudentRecord_path(:row => row_index), {:class => "btn btn-primary"} %></td>
+	</tr>
+  <% end %>
+  <% row_index = row_index + 1 %>
+<% end %>
+
+</table>
+</div>
+

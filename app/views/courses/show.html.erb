@@ -1,0 +1,274 @@
+<style>
+/*tooltip*/
+svg {
+    display: block;
+    margin: 0 auto;
+}
+.svg-tooltip {
+    pointer-events: none;
+}
+.tooltip {
+    padding: 10px;
+    color: #4A22FF;
+}
+.lead {
+    font-style: italic;
+}
+/*tooltip end*/
+
+#visualization
+{
+    border:2px solid;
+    border-radius:25px;
+}
+
+node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+    z-index: -1;
+}
+
+path.link {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1.5px;
+}
+
+text {
+    fill: #000;
+    font: 10px sans-serif;
+    pointer-events: none;
+}
+box {
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+</style>
+
+
+
+<body>
+    <% @pageTitle = "Course View" %>
+    <% if flash[:notice] %>  
+    <div class="alert alert-success">
+        <%=flash[:notice]%>
+    </div>
+    <% end %> 
+
+    <h2> Welcome! Below are the courses that you have created. </h2>
+    <h5> You can edit the course title, assignment name, tags, and students at any time. </h5>
+    <h5> To add grades, click on “Dowload CSV,” add students’ grades, save the file, then click “Upload” to upload the file to FlowGhost.</h5> 
+    <h5> At any time, you can send your students a link to their individual FlowGhost pages by clicking “Email students.” </h5>
+
+    <h3><%=@course.name%></h3>
+    <tr>
+        <td><%= link_to 'Edit Score', courses_viewCourseInfo_path(@course), {:class=>"btn btn-primary"} %></td>
+        <td><%= link_to 'Edit Assignments', assignments_path(:course_id => @course.id), {:class=>"btn btn-primary"} %></td>
+        <td><%= link_to 'Edit Tags', tags_path(:course_id => @course.id), {:class=>"btn btn-primary"} %></td>
+        <td><%= link_to 'Edit Students', students_path(:course_id => @course.id), {:class => "btn btn-primary"} %></td>
+        <td><%= link_to 'View Flowchart', students_viewFlowChart_path(:course_id => @course.id), {:class => "btn btn-primary"} %></td>
+    </tr>
+
+    <div>
+
+        <span class="col-md-4 thumbnail">
+            <br/><br/>
+            <%= link_to "Download CSV", course_download_path(:format=>'csv', :id=>@course.id), {:class=>"btn btn-success btn-lg"} %>
+        </span>
+
+        <span class="col-md-4 thumbnail">
+            <%= form_tag(course_upload_path(:id=>@course.id), { :multipart => true }) do %>
+            <%= file_field_tag "file" %>
+            <br/>
+            <%= submit_tag "upload", :class=>"btn btn-success btn-lg" %>
+            <% end %>
+        </span>
+
+        <span class="col-md-4 thumbnail">
+            <br/><br/>
+            <%= link_to "Email students", course_mail_path(:id=>@course.id), {:class=>"btn btn-success btn-lg"}  %>
+        </span>
+
+    </div class="row thumbnails text-center">
+
+
+    <div class="col-md-12" id="visualization">
+    </div>
+
+
+    <div class="col-md-12" id="visualization">
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js"> </script>
+
+    <script>
+
+    window.onload = function() {
+
+        var taglit; // Cond: global condition variable based on user selection
+        var selectedTags = new Array;
+        var operator;
+        var nodesToDisplay;
+
+        function tagfilter() {
+            var assignmentTags = this.tagnames.split(",");
+            console.log("*** tagfilter: assignmentTags are "+assignmentTags);
+            if (operator == "or") {
+                for (var i=0; i<assignmentTags.length; i++) {
+                    for (var j=0; j<selectedTags.length; j++) {
+                        if(assignmentTags[i] == selectedTags[j]) {
+                            //alert("tagfilter: "+JSON.stringify(assignmentTags[i]));
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
+            //AND
+            if (operator == "and") {
+                var i=0;
+                var flag;
+                checkSelected: 
+                for (var i=0; i<selectedTags.length; i++) {
+                    //alert("checking for "+selectedTags[i]);
+                    flag = false;
+                    for (var j=0; j<assignmentTags.length; j++) {
+                    //  alert(JSON.stringify(assignmentTags[j]));
+                    if(selectedTags[i] == assignmentTags[j]) {
+                            //alert(JSON.stringify(assignmentTags[j]));
+                            flag = true;
+                        }
+                    }
+                    if(!flag) {
+                    //  alert("returning false");
+                    return false; 
+                }
+            }
+                //alert("returning true");
+                return true;
+            }
+        }
+
+        function updateConditionFilter() {
+            var x = document.forms['tags_in'];
+            selectedTags = new Array;
+            for (var i=0; i<x.length; i++) {
+                          //        alert(x.elements[i].checked);
+                          if(x.elements[i].checked) {
+                            selectedTags.push(x.elements[i].name);
+                            console.log("^^^^^^^^ "+x.elements[i].name+" is pushed onto selectedTags");
+                        }
+                    }
+
+            operator = "or";
+            //Need to rename for more accurate description.
+            nodesToDisplay = all(tagfilter)
+            console.log("^^^^^^^^^^^ after tagfilter: nodesToDisplay are "+nodesToDisplay);
+            d3.select("svg").remove();
+            displayNodes();
+        }
+        var all = TAFFY('<%=raw @nodes.to_json%>');
+        nodesToDisplay = all();
+
+        var width=1100;
+        var height=500;
+        var totalPoints=<%=@totalpoints%>;
+        var maxNodeSize=10000;
+        var color = d3.scale.category10();
+        var force=d3.layout.force();
+        var scaleColor = d3.scale.linear()
+        .domain([0, 1])
+        .range(["red", "green"]);
+
+        displayNodes();
+
+        function displayNodes() {
+            var svg = d3.select("#visualization").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+            //add the tooltips
+            var div = d3.select("#visualization").append("div")   
+            .attr("class", "tooltip")               
+            .style("opacity", 0);
+
+            var nodes = JSON.parse(nodesToDisplay.stringify()) ;
+            console.log(nodes);
+
+            force
+            .nodes(nodes)
+            .size([width, height])
+            .charge(-160)
+            .on("tick", tick)
+            .start();
+
+            // define the nodes
+            var node = svg.selectAll("node")
+            .data(force.nodes())
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .style("position","relative")
+            .call(force.drag);
+
+            //add node shape
+            node.append("path")
+            .attr("d", d3.svg.symbol()
+                .type(function(d) { return d3.svg.symbolTypes[0]; })
+                .size(function(d) { return d.points_possible/totalPoints*maxNodeSize; }))
+            .style("fill", function(d) {return scaleColor(d.points/d.points_possible);})
+            .style("opacity", 1);
+
+            //add details
+            node.append("text") 
+            .attr("dx", function(d) { return Math.sqrt(d.points_possible/totalPoints*maxNodeSize); })
+            .text(function(d){
+                //return d.name+", "+d.points+"/"+d.points_possible;
+                return d.name.substring(0,3) + ".."
+            });
+
+            node.append("text")
+            .attr("dx", function(d) { return Math.sqrt(d.points_possible/totalPoints*maxNodeSize); })
+            .attr("dy", 10)
+            .text(function(d){
+                return $.map( d.tagnames.split(","), function( val ) {  return val;})
+            });
+            
+            node.on("mouseover", showDetails).on("mouseout", hideDetails)
+            
+            function showDetails() {
+                d3.select(this).select("path").style("stroke","black").style("stroke-width", 2.0)
+                d3.select(this).select("text").text(function(d){return d.name})
+                //d3.select(this).selectAll(function() { return this.getElementsByTagName("foreignObject"); }).style("opacity", 0.7).style("display","inline").style("z-index",300).html("<p></p>")
+                d3.select(this).append("foreignObject").attr("width", 400)
+                .attr("height", 500)
+                .style("display","inline")
+                .append("xhtml:pre")
+                .style("background-color", "purple")
+                .style("color", "yellow")
+                .style("z-index",3)
+                .append("xhtml:p")
+                .text(function(d){return "name: " + d.name + "\n" + "points: " + d.points + "/" + d.points_possible})
+            }
+
+            function hideDetails() {
+                d3.select(this).select("text").text(function(d){return d.name.substring(0,3) + ".."})
+                d3.select(this).select("path").style("stroke","white").style("stroke-width", 0.0)
+                d3.select(this).selectAll(function() { return this.getElementsByTagName("foreignObject"); }).style("display","none")
+            }
+
+
+            function tick() {
+                node
+                .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+            }
+
+
+        }
+    };
+    </script>
+</body>

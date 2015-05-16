@@ -1,0 +1,21 @@
+<% if flash[:notice] %>
+	<div class="alert alert-danger">
+		<%=flash[:notice]%>
+	</div>
+<% end %>
+
+
+
+<%= form_for @assignment do |f| %>
+	<div class="form-group">
+		<%= f.text_field :name,{:class=>"form-control",:placeholder=>"Name"}  %>
+	</div>
+	<div class="form-group">
+		<%= f.number_field :points_possible,{:class=>"form-control",:placeholder=>"Total Points Possible"}  %>
+	</div>
+	<div class="form-group">
+		<%= hidden_field_tag "course_id", params[:course_id] %>
+		<%= f.submit "Submit" ,{:class=>"btn btn-primary"}%>
+	</div>
+<% end %>
+

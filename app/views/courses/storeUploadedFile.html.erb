@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Upload Test</title>
+    </head>
+    <body>
+        <h1>User's upload</h1>
+        <h2>File upload</h2>
+        <%= form_tag({:action => :storeUploadedFile}, :multipart => true, :method => "post") do %>
+        Filename:<%= file_field_tag "uploadFile" -%>
+        <%= submit_tag "File upload", :disable_with => "File uploading..." , :name => "btnSave", :id => "btnSave" %>
+        <% end %>
+    </body>
+</html>

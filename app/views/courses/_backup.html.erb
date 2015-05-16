@@ -1,0 +1,497 @@
+<script>
+function oneToTwo() {
+  document.getElementById('form-course-name').style.display = "none";
+  document.getElementById('form-nodes').style.display = "block";
+  document.getElementById('form-prev-button').removeAttribute('disabled');
+  document.getElementById('form-next-button').setAttribute('onclick', 'twoToThree()');
+  document.getElementById('form-prev-button').setAttribute('onclick', 'twoToOne()');
+  document.getElementById('footer-step').innerHTML = '<center>Step 2 of 3</center>';
+}
+
+function twoToThree() {
+  document.getElementById('form-nodes').style.display = "none";
+  document.getElementById('form-students').style.display = "block";
+  document.getElementById('form-submit-button').removeAttribute('disabled');
+  document.getElementById('form-next-button').disabled = true;
+  document.getElementById('form-prev-button').setAttribute('onclick', 'threeToTwo()');
+  document.getElementById('footer-step').innerHTML = '<center>Step 3 of 3</center>';
+  document.getElementById('form-modal-button').style.display = "inline";
+}
+
+function threeToTwo() {
+  document.getElementById('form-students').style.display = "none";
+  document.getElementById('form-nodes').style.display = "block";
+  document.getElementById('form-next-button').removeAttribute('disabled');
+  document.getElementById('form-next-button').setAttribute('onclick', 'twoToThree()');
+  document.getElementById('form-prev-button').setAttribute('onclick', 'twoToOne()');
+  document.getElementById('footer-step').innerHTML = '<center>Step 2 of 3</center>';
+  document.getElementById('form-modal-button').style.display = "none";
+}
+
+function twoToOne() {
+  document.getElementById('form-course-name').style.display = "block";
+  document.getElementById('form-nodes').style.display = "none";
+  document.getElementById('form-prev-button').disabled = true;
+  document.getElementById('form-next-button').setAttribute('onclick', 'oneToTwo()');
+  document.getElementById('form-prev-button').setAttribute('onclick', '');
+  document.getElementById('footer-step').innerHTML = '<center>Step 1 of 3</center>';
+}
+
+function addStudentLine() {
+  var newStudentTr = document.createElement('tr');
+  numStudents += 1;
+  var newId = 'form-student-' + numStudents.toString();
+  newStudentTr.setAttribute('id', newId);
+  var inputId = 'form-student-input-' + numStudents.toString();
+  var dispId = 'form-student-display-' + numStudents.toString();
+  var statusId = 'form-student-status-' + numStudents.toString();
+  var delId = 'form-student-delete-' + numStudents.toString();
+  var numId = 'form-student-num-' + numStudents.toString();
+  newStudentTr.innerHTML = '<td id=' + numId + ' style="vertical-align:middle; text-align:center">' + numStudents.toString() + '</td> <td style="vertical-align:middle"><input id=' + inputId + ' class="form-control" type="text" placeholder="Email Address" onblur="onStudentBlur(' + numStudents.toString() + ')"></input><div id=' + dispId + ' onclick="editStudentLine(' + numStudents.toString() + ')" style="display:none"></div><input id=' + delId + ' type="hidden" value="&#10006" style="vertical-align:middle; display:inline; color:red; float:right" onclick="delStudentLine(' + numStudents.toString() + ')"></input></td> <td id=' + statusId + ' style="vertical-align:middle; text-align:center; background-color:red">INVALID</td>';
+  document.getElementById('form-students-table').appendChild(newStudentTr);
+}
+
+function delStudentLine(line) {
+  var toRemove = document.getElementById('form-student-' + line.toString());
+  document.getElementById('form-students-table').removeChild(toRemove);
+  for (var i=line+1; i<=numStudents; i++) {
+    var oldId = 'form-student-' + i.toString();
+    var newId = 'form-student-' + (i-1).toString();
+    var oldInputId = 'form-student-input-' + i.toString();
+    var oldDispId = 'form-student-display-' + i.toString();
+    var oldStatusId = 'form-student-status-' + i.toString();
+    var oldDelId = 'form-student-delete-' + i.toString();
+    var oldNumId = 'form-student-num-' + i.toString();
+    var newInputId = 'form-student-input-' + (i-1).toString();
+    var newDispId = 'form-student-display-' + (i-1).toString();
+    var newStatusId = 'form-student-status-' + (i-1).toString();
+    var newDelId = 'form-student-delete-' + (i-1).toString();
+    var newNumId = 'form-student-num-' + (i-1).toString();
+    var tr = document.getElementById(oldId);
+    tr.setAttribute('id', newId);
+    document.getElementById(oldInputId).setAttribute('onblur', 'onStudentBlur(' + (i-1).toString() + ')');
+    document.getElementById(oldInputId).setAttribute('id', newInputId);
+    document.getElementById(oldDispId).setAttribute('onclick', 'editStudentLine(' + (i-1).toString() + ')');
+    document.getElementById(oldDispId).setAttribute('id', newDispId);
+    document.getElementById(oldStatusId).setAttribute('id', newStatusId);
+    document.getElementById(oldDelId).setAttribute('onclick', 'delStudentLine(' + (i-1).toString() + ')');
+    document.getElementById(oldDelId).setAttribute('id', newDelId);
+    document.getElementById(oldNumId).innerHTML = (i-1);
+    document.getElementById(oldNumId).setAttribute('id', newNumId);
+  }
+  numStudents--;
+  updateHiddenEmailField();
+}
+
+function editStudentLine(id) {
+  var inputId = 'form-student-input-' + id.toString();
+  var dispId = 'form-student-display-' + id.toString();
+  var delId = 'form-student-delete-' + id.toString();
+  var input = document.getElementById(inputId);
+  var display = document.getElementById(dispId);
+  var del = document.getElementById(delId);
+  input.setAttribute('type', 'text');
+  display.setAttribute('style', 'display:none');
+  del.setAttribute('type', 'hidden');
+  input.focus();
+}
+
+function onStudentBlur(id) {
+  var inputId = 'form-student-input-' + id.toString();
+  var dispId = 'form-student-display-' + id.toString();
+  var statusId = 'form-student-status-' + id.toString();
+  var delId = 'form-student-delete-' + id.toString();
+  var input = document.getElementById(inputId);
+  var display = document.getElementById(dispId);
+  var status = document.getElementById(statusId);
+  var del = document.getElementById(delId);
+  var email = input.value;
+  var valid = verifyEmail(email);
+  if (!valid) {
+    if (email.trim() == "" && id != numStudents) {
+      delStudentLine(id);
+    }
+    status.setAttribute('style', 'vertical-align:middle; text-align:center; background-color:red');
+    status.innerHTML = "INVALID";
+    updateHiddenEmailField();
+    return;
+  }
+  input.setAttribute('type', 'hidden');
+  display.innerHTML = email;
+  display.setAttribute('style', 'display:inline');
+  status.setAttribute('style', 'vertical-align:middle; text-align:center; background-color:lightgreen');
+  status.innerHTML = "OK";
+  del.setAttribute('type', 'image');
+  if (id == numStudents) {
+    addStudentLine();
+  }
+  document.getElementById('form-student-input-' + numStudents.toString()).focus();
+  updateHiddenEmailField();
+}
+
+function verifyEmail(email) {
+  email = email.trim();
+  var atpos = email.indexOf("@");
+  var dotpos = email.lastIndexOf(".");
+  if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+    return false;
+  }
+  return true;
+}
+
+function updateHiddenEmailField() {
+  var JSON = '[';
+  for (var i=1; i<=numStudents; i++) {
+    var email = document.getElementById('form-student-display-' + i).innerHTML.trim();
+    var status = document.getElementById('form-student-status-' + i).innerHTML;
+    if (status == "OK") {
+      if (JSON != '[') {
+        JSON += ', ';
+      }
+      JSON += '"' + email + '"';
+    }
+  }
+  JSON += ']';
+  document.getElementById('form-students-hidden').setAttribute('value', JSON);
+}
+
+function parseEmailList() {
+  var rawString = document.getElementById('form-students-modal-input').value;
+  rawString = rawString.trim();
+  var regExp = new RegExp("\n", "g");
+  rawString = rawString.replace(regExp, ',');
+  var emailArray = rawString.split(',');
+  console.log(emailArray);
+  emailArray.forEach(updateEmailListFromModal);
+  updateHiddenEmailField();
+  document.getElementById('form-students-modal-input').value = '';
+}
+
+function updateEmailListFromModal(element, index, array) {
+  var input = document.getElementById('form-student-input-' + numStudents);
+  var status = document.getElementById('form-student-status-' + numStudents);
+  var display = document.getElementById('form-student-display-' + numStudents);
+  var del = document.getElementById('form-student-delete-' + numStudents);
+  var email = element.trim();
+  input.value = email;
+  if (!verifyEmail(email)) {
+    if (email.trim() == "" && id != numStudents) {
+      delStudentLine(id);
+    }
+    status.setAttribute('style', 'vertical-align:middle; text-align:center; background-color:red');
+    status.innerHTML = "INVALID";
+  } else {
+    input.setAttribute('type', 'hidden');
+    display.innerHTML = email;
+    display.setAttribute('style', 'display:inline');
+    status.setAttribute('style', 'vertical-align:middle; text-align:center; background-color:lightgreen');
+    status.innerHTML = "OK";
+    del.setAttribute('type', 'image');
+  }
+  addStudentLine(); 
+}
+
+function addNodeLine() {
+  var newNodeTr = document.createElement('tr');
+  numNodes += 1;
+  var newId = 'form-node-' + numNodes.toString();
+  newNodeTr.setAttribute('id', newId);
+  var nameId = 'form-node-name-' + numNodes.toString();
+  var dispNameId = 'form-node-dispName-' + numNodes.toString();
+  var tagsId = 'form-node-tags-' + numNodes.toString();
+  var dispTagsId = 'form-node-dispTags-' + numNodes.toString();
+  var ptsId = 'form-node-pts-' + numNodes.toString();
+  var dispPtsId = 'form-node-dispPts-' + numNodes.toString();
+  var statusId = 'form-node-status-' + numNodes.toString();
+  var delId = 'form-node-delete-' + numNodes.toString();
+  var numId = 'form-node-num-' + numNodes.toString();
+  newNodeTr.innerHTML = '<td id=' + numId + ' style="vertical-align:middle; text-align:center">' + numNodes + '</td> <td style="vertical-align:middle"> <input id=' + nameId + ' class="form-control" type="text" placeholder="Assignment Name" onblur="onNodeBlur(' + numNodes + ', \'' + nameId + '\')"></input> <div id=' + dispNameId + ' onclick="editNodeLine(' + numNodes + ', \'' + nameId + '\')" style="display:none"></div></td> <td style="vertical-align:middle"> <input id=' + tagsId + ' class="form-control" type="text" placeholder="Assignment Tags" onblur="onNodeBlur(' + numNodes + ', \'' + tagsId + '\')"></input> <div id=' + dispTagsId + ' onclick="editNodeLine(' + numNodes + ', \'' + tagsId + '\')" style="display:none"></div></td> <td style="vertical-align:middle"> <input id=' + ptsId + ' class="form-control" type="text" placeholder="TPP" onblur="onNodeBlur(' + numNodes + ', \'' + ptsId + '\')"></input> <div id=' + dispPtsId + ' onclick="editNodeLine(' + numNodes + ', \'' + ptsId + '\')" style="display:none"></div><input id=' + delId + ' type="hidden" value="&#10006" tabIndex="-1" style="vertical-align:middle; color:red; display:inline; float:right" onclick="delNodeLine(' + numNodes + ')"></input></td> <td id=' + statusId + ' style="vertical-align:middle; text-align:center; background-color:red">INVALID</td>';
+  document.getElementById('form-nodes-table').appendChild(newNodeTr);
+}
+
+function editNodeLine(id, fullId) {
+  var nameId = 'form-node-name-' + id.toString();
+  var dispNameId = 'form-node-dispName-' + id.toString();
+  var tagsId = 'form-node-tags-' + id.toString();
+  var dispTagsId = 'form-node-dispTags-' + id.toString();
+  var ptsId = 'form-node-pts-' + id.toString();
+  var dispPtsId = 'form-node-dispPts-' + id.toString();
+  var delId = 'form-node-delete-' + id.toString();
+  var name = document.getElementById(nameId);
+  var dispName = document.getElementById(dispNameId);
+  var tags = document.getElementById(tagsId);
+  var dispTags = document.getElementById(dispTagsId);
+  var pts = document.getElementById(ptsId);
+  var dispPts = document.getElementById(dispPtsId);
+  var del = document.getElementById(delId);
+  name.setAttribute('type', 'text');
+  dispName.setAttribute('style', 'display:none');
+  tags.setAttribute('type', 'text');
+  dispTags.setAttribute('style', 'display:none');
+  pts.setAttribute('type', 'text');
+  dispPts.setAttribute('style', 'display:none');
+  del.setAttribute('type', 'hidden');
+  document.getElementById(fullId).focus();
+}
+
+function delNodeLine(line) {
+  var toRemove = document.getElementById('form-node-' + line.toString());
+  document.getElementById('form-nodes-table').removeChild(toRemove);
+  for (var i=line+1; i<=numNodes; i++) {
+    var oldId = 'form-node-' + i.toString();
+    var newId = 'form-node-' + (i-1).toString();
+    var oldNameId = 'form-node-name-' + i.toString();
+    var oldDispNameId = 'form-node-dispName-' + i.toString();
+    var oldTagsId = 'form-node-tags-' + i.toString();
+    var oldDispTagsId = 'form-node-dispTags-' + i.toString();
+    var oldPtsId = 'form-node-pts-' + i.toString();
+    var oldDispPtsId = 'form-node-dispPts-' + i.toString();
+    var oldStatusId = 'form-node-status-' + i.toString();
+    var oldDelId = 'form-node-delete-' + i.toString();
+    var oldNumId = 'form-node-num-' + i.toString();
+    var newNameId = 'form-node-name-' + (i-1).toString();
+    var newDispNameId = 'form-node-dispName-' + (i-1).toString();
+    var newTagsId = 'form-node-tags-' + (i-1).toString();
+    var newDispTagsId = 'form-node-dispTags-' + (i-1).toString();
+    var newPtsId = 'form-node-pts-' + (i-1).toString();
+    var newDispPtsId = 'form-node-dispPts-' + (i-1).toString();
+    var newStatusId = 'form-node-status-' + (i-1).toString();
+    var newDelId = 'form-node-delete-' + (i-1).toString();
+    var newNumId = 'form-node-num-' + (i-1).toString();
+    var tr = document.getElementById(oldId);
+    tr.setAttribute('id', newId);
+    document.getElementById(oldNameId).setAttribute('onblur', 'onNodeBlur(' + (i-1).toString() + ', "' + newNameId + '")');
+    document.getElementById(oldNameId).setAttribute('id', newNameId);
+    document.getElementById(oldTagsId).setAttribute('onblur', 'onNodeBlur(' + (i-1).toString() + ', "' + newTagsId + '")');
+    document.getElementById(oldTagsId).setAttribute('id', newTagsId);
+    document.getElementById(oldPtsId).setAttribute('onblur', 'onNodeBlur(' + (i-1).toString() + ', "' + newPtsId + '")');
+    document.getElementById(oldPtsId).setAttribute('id', newPtsId);
+    document.getElementById(oldDispNameId).setAttribute('onclick', 'editNodeLine(' + (i-1).toString() + ', "' + newNameId + '")');
+    document.getElementById(oldDispNameId).setAttribute('id', newDispNameId);
+    document.getElementById(oldDispTagsId).setAttribute('onclick', 'editNodeLine(' + (i-1).toString() + ', "' + newTagsId + '")');
+    document.getElementById(oldDispTagsId).setAttribute('id', newDispTagsId);
+    document.getElementById(oldDispPtsId).setAttribute('onclick', 'editNodeLine(' + (i-1).toString() + ', "' + newPtsId + '")');
+    document.getElementById(oldDispPtsId).setAttribute('id', newDispPtsId);
+    document.getElementById(oldStatusId).setAttribute('id', newStatusId);
+    document.getElementById(oldDelId).setAttribute('onclick', 'delNodeLine(' + (i-1).toString() + ')');
+    document.getElementById(oldDelId).setAttribute('id', newDelId);
+    document.getElementById(oldNumId).innerHTML = (i-1);
+    document.getElementById(oldNumId).setAttribute('id', newNumId);
+  }
+  numNodes--;
+  updateHiddenNodesField();
+}
+
+function onNodeBlur(id, fullId) {
+  var nameId = 'form-node-name-' + id.toString();
+  var dispNameId = 'form-node-dispName-' + id.toString();
+  var ptsId = 'form-node-pts-' + id.toString();
+  var dispPtsId = 'form-node-dispPts-' + id.toString();
+  var tagsId = 'form-node-tags-' + id.toString();
+  var dispTagsId = 'form-node-dispTags-' + id.toString();
+  var statusId = 'form-node-status-' + id.toString();
+  var delId = 'form-node-delete-' + id.toString();
+  var name = document.getElementById(nameId);
+  var dispName = document.getElementById(dispNameId);
+  var pts = document.getElementById(ptsId);
+  var dispPts = document.getElementById(dispPtsId);
+  var tags = document.getElementById(tagsId);
+  var dispTags = document.getElementById(dispTagsId);
+  var status = document.getElementById(statusId);
+  var del = document.getElementById(delId);
+  var valid = verifyNodeParams(id, name.value, pts.value, tags.value);
+  if (!valid) {
+    if (name.value.trim() == "" && pts.value.trim() == "" && tags.value.trim() == "" && id != numNodes) {
+      delNodeLine(id);
+      return;
+    }
+    status.setAttribute('style', 'vertical-align:middle; text-align:center; background-color:red');
+    status.innerHTML = "INVALID";
+    updateHiddenNodesField();
+    return;
+  } else if (fullId == nameId || fullId == tagsId) {
+    return;
+  }
+  name.setAttribute('type', 'hidden');
+  dispName.innerHTML = name.value.trim();
+  dispName.setAttribute('style', 'display:inline');
+  tags.setAttribute('type', 'hidden');
+  dispTags.innerHTML = tags.value.trim();
+  dispTags.setAttribute('style', 'display:inline');
+  pts.setAttribute('type', 'hidden');
+  dispPts.innerHTML = pts.value.trim();
+  dispPts.setAttribute('style', 'display:inline');
+  status.setAttribute('style', 'vertical-align:middle; text-align:center; background-color:lightgreen');
+  status.innerHTML = "OK";
+  del.setAttribute('type', 'image');
+  if (id == numNodes) {
+    addNodeLine();
+  }
+  document.getElementById('form-node-name-' + numNodes.toString()).focus();
+  updateHiddenNodesField();
+}
+
+function verifyNodeParams(id, name, tpp, tags) {
+  if (name.trim() == "" || tpp.trim() == "") {
+    return false;
+  }
+  if (isNaN(tpp.trim())) {
+    return false;
+  } else {
+    if (parseInt(tpp.trim()) <= 0) {
+      return false;
+    }
+  }
+  try {
+    JSON.parse(tags);
+  } catch (e) {
+    return false;
+  }
+  return true;
+}
+
+function updateHiddenNodesField() {
+  var JSON = '[';
+  for (var i=1; i<=numNodes; i++) {
+    var name = document.getElementById('form-node-dispName-' + i).innerHTML.trim();
+    var tags = document.getElementById('form-node-dispTags-' + i).innerHTML.trim();
+    var tpp = document.getElementById('form-node-dispPts-' + i).innerHTML.trim();
+    var id = document.getElementById('form-node-num-' + i).innerHTML.trim();
+    var status = document.getElementById('form-node-status-' + i).innerHTML;
+    if (status == "OK") {
+      if (JSON != '[') {
+        JSON += ', ';
+      }
+      JSON += '{"name":"' + name + '","tags":' + tags + ',"points_possible":' + parseInt(tpp) + ',"node_id":' + i + ',"group":-1}';
+    }
+  }
+  JSON += ']';
+  document.getElementById('form-nodes-hidden').setAttribute('value', JSON);
+}
+
+numStudents = 1;
+numNodes = 1;
+</script>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title"><center>Create a new course</center></h1>
+  </div>
+
+  <div id="form-course-form" class="panel-body">
+    <%= form_for(@course) do |f| %>
+      <% if @course.errors.any? %>
+	<div class="alert alert-danger">
+	  <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+          <ul>
+	    <% @course.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	  </ul>
+
+	</div>
+      <% end %>
+
+      <div id="form-course-name" class="form-group">  
+	<%= f.text_field :name,{:class=>"form-control",:placeholder=>"Course Name"}  %>  
+      </div>
+
+      <div id="form-nodes" class="form-group" style="display:none">  
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <table class="table table-striped table-hover">
+              <colgroup>
+                <col style="width:5%"/>
+                <col style="width:35%"/>
+                <col style="width:35%"/>
+                <col style="width:10%"/>
+                <col style="width:15%"/>
+              </colgroup>
+              <tbody id="form-nodes-table">
+              <tr>
+                <th style="vertical-align:middle; text-align:center">#</th>
+                <th style="vertical-align:middle; text-align:center">Assignment Name</th>
+                <th style="vertical-align:middle; text-align:center">Tags</th>
+                <th style="vertical-align:middle; text-align:center">Points Possible</th>
+                <th style="vertical-align:middle; text-align:center">Status</th>
+              </tr>
+              <tr id="form-node-1">
+                <td id="form-node-num-1" style="vertical-align:middle; text-align:center">1</td>
+                <td style="vertical-align:middle"> <input id="form-node-name-1" class="form-control" type="text" placeholder="Assignment Name" onblur="onNodeBlur(1, 'form-node-name-1')"></input>
+                  <div id="form-node-dispName-1" onclick="editNodeLine(1, 'form-node-name-1')" style="display:none"></div></td>
+                <td style="vertical-align:middle"> <input id="form-node-tags-1" class="form-control" type="text" placeholder="Assignment Tags" onblur="onNodeBlur(1, 'form-node-tags-1')"></input>
+                  <div id="form-node-dispTags-1" onclick="editNodeLine(1, 'form-node-tags-1')" style="display:none"></div></td>
+                <td style="vertical-align:middle"> <input id="form-node-pts-1" class="form-control" type="text" placeholder="TPP" onblur="onNodeBlur(1, 'form-node-pts-1')"></input>
+                  <div id="form-node-dispPts-1" onclick="editNodeLine(1, 'form-node-pts-1')" style="display:none"></div><input id="form-node-delete-1" tabIndex="-1" type="hidden" value="&#10006" style="vertical-align:middle; color:red; display:inline; float:right" onclick="delNodeLine(1)"></input></td>
+                <td id="form-node-status-1" style="vertical-align:middle; text-align:center; background-color:red">INVALID</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <input id="form-nodes-hidden" class="form-control" type="text" name="assignments" value="[]"></input>
+      </div>
+
+      <div id="form-students" class="form-group" style="display:none">  
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <table class="table table-striped table-hover">
+              <colgroup>
+                <col style="width:5%"/>
+                <col style="width:80%"/>
+                <col style="width:15%"/>
+              </colgroup>
+              <tbody id="form-students-table">
+              <tr>
+                <th style="vertical-align:middle; text-align:center">#</th>
+                <th style="vertical-align:middle; text-align:center">Email</th>
+                <th style="vertical-align:middle; text-align:center">Status</th>
+              </tr>
+              <tr id="form-student-1">
+                <td id="form-student-num-1" style="vertical-align:middle; text-align:center">1</td>
+                <td style="vertical-align:middle"> <input id="form-student-input-1" class="form-control" type="text" placeholder="Email Address" onblur="onStudentBlur(1)"></input>
+                  <div id="form-student-display-1" onclick="editStudentLine(1)" style="display:none"></div><input id="form-student-delete-1" type="hidden" value="&#10006" style="vertical-align:middle; color:red; display:inline; float:right" onclick="delStudentLine(1)"></input></td>
+                <td id="form-student-status-1" style="vertical-align:middle; text-align:center; background-color:red">INVALID</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <input id="form-students-hidden" class="form-control" type="hidden" name="students" value="[]"></input>
+      </div>  
+
+      <div id="form-button-div" class="form-group">
+	<center>
+          <input id="form-prev-button" class="btn btn-primary" type="button" value="Previous" onclick="" disabled>
+          <input id="form-next-button" class="btn btn-primary" type="button" value="Next" onclick="oneToTwo()">
+          <input id="form-submit-button" class="btn btn-primary" type="submit" value="Submit" style="display:inline" name="commit" disabled>
+          <button id="form-modal-button" class="btn btn-primary" data-toggle="modal" data-target="#form-students-modal" style="float:right; display:none"><span class="glyphicon glyphicon-list"></span> Enter List</button>
+        </center>
+      </div>
+
+      <div id="form-students-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input class="close" data-dismiss="modal" type="image" value="&#10006" style="vertical-align:middle; color:red; display:inline; float:right"></input>
+              <h4 class="modal-title">Input line-separated email list</h4>
+            </div>
+            <div class="modal-body">
+              <textarea id="form-students-modal-input" class="form-control" rows="20"></textarea>  
+            </div>
+            <div class="modal-footer">
+              <input class="btn btn-primary" type="button" value="Submit" data-dismiss="modal" onclick="parseEmailList()">
+            </div>
+          </div>
+        </div>
+      </div> 
+
+    <% end %>
+
+  </div>
+
+  <div id="panel-footer" class="panel-footer">
+    <div id="footer-step"><center>Step 1 of 3</center></div>
+  </div>
+
+</div> 

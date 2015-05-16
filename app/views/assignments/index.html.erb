@@ -1,0 +1,29 @@
+<h1>Listing assignments</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignments.each do |assignment| %>
+
+      <tr>
+        <td><%= assignment.name %></td>
+        <td><%= link_to 'Edit', {:controller => :assignments, :action => 'edit', :id => assignment.id, :course_id=> params[:course_id]}, :class=>"btn btn-lg btn-link" %></td>
+        <td><%= button_to "Destroy", {:controller => :assignments, :action => 'destroy', :id => assignment.id, :course_id => params[:course_id]}, :class=>"btn btn-danger" ,:method => :delete %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "Add an assignment", {:controller => :assignments, :action => 'new', :course_id=> params[:course_id]}, :class=>"btn btn-lg btn-link" %>
+<%= link_to "Back to course page", course_path(:id=>params[:course_id]), {:class=>"btn btn-lg btn-link"} %>
+

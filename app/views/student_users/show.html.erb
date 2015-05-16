@@ -1,0 +1,18 @@
+<h2>Profile</h2>
+
+<h3>
+  <strong>Name:</strong>
+  <%= @student_user.user.name %>
+</h3>
+
+<h3>
+  <strong>Email:</strong>
+  <%= @student_user.user.email %>
+</h3>
+
+<% if @student_user[:student_id] %>
+  <p> <%= link_to 'View grades', gradeview_path(:id=>Student.find(@student_user[:student_id]).random_url), {:class=>"btn btn-large btn-link"}  %> </p>
+<% end %>
+
+<p> <%= link_to 'Edit', edit_user_path(@student_user.user), {:class=>"btn btn-large btn-link"}  %> </p>
+

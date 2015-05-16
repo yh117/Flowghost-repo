@@ -1,0 +1,3 @@
+class InstructorCourse < Course
+
+end

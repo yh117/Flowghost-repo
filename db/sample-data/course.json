@@ -1,0 +1,43 @@
+{
+   "name":"course 1",
+   "assignments_attributes":[
+      {
+         "name":"assignment1",
+         "points_possible":100,
+         "tags_attributes":[
+            {
+               "name":"tag1"
+            }
+         ]
+      },
+      {
+         "name":"assignment2",
+         "points_possible":50,
+         "tags_attributes":[
+            {
+               "name":"tag2"
+            }
+         ]
+      },
+      {
+         "name":"assignment3",
+         "points_possible":10,
+         "tags_attributes":[
+            {
+               "name":"tag1"
+            },
+            {
+               "name":"tag2"
+            }
+         ]
+      }
+   ],
+   "students_attributes":[
+      {
+         "email":"asdf@test.com"
+      },
+      {
+         "email":"anotherstudent@test.com"
+      }
+   ]
+}

@@ -1,0 +1,96 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 248ms (Views: 221.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/courses.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/grades.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/assignments.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/flowcharts.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/view.css?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/assignments.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/flowcharts.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/taffy.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/view.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 11:57:05 -0400

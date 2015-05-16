@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1 class="panel-title"><center>Add course information</center></h1>
+	</div>
+	<div class="panel-body">
+		<center>
+			<%= form_tag(courses_uploadCsvCreateCourse_path, method: "get") do %>
+			<label>Course Name</label>
+			<input class="form-control" name="courseName" type="textField" /><br><br>
+			<input class="btn btn-success btn-lg" type="submit" />
+			<% end %>
+		</center>
+	</div>
+</div>

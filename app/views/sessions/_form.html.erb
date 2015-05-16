@@ -1,0 +1,26 @@
+<%= form_tag url_for(:controller=>"sessions", :action=>"create") do %> 
+ 
+ <% if flash[:notice] %>  
+ <div class="alert alert-danger">
+ 	<%=flash[:notice]%>
+ </div>
+  <% end %>  
+
+<h3> I am... </h3>
+
+<div class="form-group">
+<%= select_tag :role, options_for_select([['A student' ,'StudentUser'], ['An instructor', 'InstructorUser']]) %>
+</div>
+
+<div class="form-group">
+<%= text_field_tag :email, nil, {:class=>"form-control",:placeholder=>"Email"} %>  
+</div>
+<div class="form-group">
+<%= password_field_tag :password, nil, {:class=>"form-control",:placeholder=>"Password"}%>  
+</div>
+
+<div class="form-group">
+<%= submit_tag "Log in",{:class=>"btn btn-primary"} %>
+</div>
+
+<%end%>

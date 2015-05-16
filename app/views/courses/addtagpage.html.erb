@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tags</title>
+	<style>
+	.selectbar{width: 500px; height: 20px;}
+	</style>
+	<script>
+	window.onload = function() {
+
+
+		var oBtn1 = document.getElementById("btn1");
+		oBtn1.onclick = function() {
+			var oIpt = document.getElementById("mySingleFieldTags");
+			var oUl = document.getElementById("ul1");
+			var tagStr = "TAG" + oIpt.value;
+			if (oIpt.value != "") {
+				oUl.innerHTML += ("<input id='" + tagStr + "' type='button' class='btn btn-danger' onclick='attachTag(this.id)' value=" + oIpt.value + "></input>&nbsp;&nbsp;");
+			}
+			oIpt.value = "";
+		}
+
+		
+		var oBtn2 = document.getElementById("btn2");
+		oBtn2.onclick = function() {
+			var oSel = document.getElementById("sel1");	
+			var oUl = document.getElementById("ul1");
+			var oChks = oUl.getElementsByTagName("input");
+			for (var i = 0; i < oChks.length; i++) {
+				if (oChks[i].checked == true) {
+					oIpt.value += oChks[i].name + ";";
+				}
+			}
+		};
+		
+	};
+	var oLastSelectedAssignmentBtn = null;
+	var oSelectedAssignmentBtn = null;
+	var tagAssignmentPairs = {};
+
+	function attachTag(tagID) {
+		if (oSelectedAssignmentBtn != null) {
+			var oSelectedTagBtn = document.getElementById(tagID);
+			var hiddenInputStr = "HIDDEN" + oSelectedAssignmentBtn.id;
+			var oHiddenInput = document.getElementById(hiddenInputStr);
+			if (oSelectedTagBtn.className == "btn btn-success") {
+				oSelectedTagBtn.className = "btn btn-danger";
+				var tagStr = oSelectedTagBtn.value + ";";
+				oHiddenInput.value = tagAssignmentPairs[oSelectedAssignmentBtn.id].replace(tagStr, '');
+			}
+			else {
+				oSelectedTagBtn.className = "btn btn-success";
+			}
+			if (tagAssignmentPairs[oSelectedAssignmentBtn.id] == null) {
+				tagAssignmentPairs[oSelectedAssignmentBtn.id] = "";
+			}
+			if (tagAssignmentPairs[oSelectedAssignmentBtn.id].indexOf(oSelectedTagBtn.value) == -1) {
+				oHiddenInput.value += (oSelectedTagBtn.value + ';');
+				tagAssignmentPairs[oSelectedAssignmentBtn.id] = oHiddenInput.value;
+				//alert("Assignment " + oSelectedAssignmentBtn.value + "now has tags: " + oHiddenInput.value );
+			}
+			else {
+				//alert("Assignment " + oSelectedAssignmentBtn.value + " already has tag " + oHiddenInput.value + "!");
+			}
+		}
+	}
+
+	function selectAssignmentBtn(assignmentID) {
+		if (oLastSelectedAssignmentBtn != null) {
+			oLastSelectedAssignmentBtn.className = "btn btn-default";
+		}
+		oSelectedAssignmentBtn = document.getElementById(assignmentID);
+		oSelectedAssignmentBtn.className = "btn btn-primary";
+		//alert(oSelectedAssignmentBtn.value);
+		//alert(tagAssignmentPairs[oSelectedAssignmentBtn.id]);
+		var oTags = document.getElementById("ul1").getElementsByTagName("input");
+		if (tagAssignmentPairs[oSelectedAssignmentBtn.id] == null) {
+			tagAssignmentPairs[oSelectedAssignmentBtn.id] = "";
+		}
+		for (var i = 0; i < oTags.length; i++) {
+			//alert(tagAssignmentPairs[oSelectedAssignmentBtn.id].indexOf(oTags[i].value));
+			if(tagAssignmentPairs[oSelectedAssignmentBtn.id].indexOf(oTags[i].value) > -1) {
+				oTags[i].className = "btn btn-success";
+			}
+			else {
+				oTags[i].className = "btn btn-danger";
+			}
+		}
+		oLastSelectedAssignmentBtn = oSelectedAssignmentBtn;
+	}
+	</script>
+</head>
+<body>
+	<h1> Please add tag for this course </h1>
+	<hr>
+
+	<div id="tags1">
+		<form id="form1">
+			<label>Create Tags</label><br>
+			<input name="tags" id="mySingleFieldTags" value="" class="form-control"><br>
+			<button id="btn1" type="button" class="btn btn-primary">create tag</button><br><br>
+			<div id="ul1">
+			</div>
+		</form>
+	</div>
+
+
+
+	<hr>	
+	<% schema_idx = 0 %>
+	<% if !@student_record.nil? %>
+	<% @student_record.each do |s| %>
+	<% if schema_idx > 1 %>
+	<button id="BTN<%= @csv_object[0][schema_idx] %>" value="<%= @csv_object[0][schema_idx] %>" class="btn btn-default" style="width:300px;height:40px;" onclick="selectAssignmentBtn(this.id)"><%= @csv_object[0][schema_idx] %></button>&nbsp;&nbsp;
+	<% if schema_idx % 3 == 1 %>
+	<br><br>
+	<% end %>
+	<% end %>
+	<% schema_idx = schema_idx + 1 %>
+	<% end %>
+	<% end %>
+	<hr>
+	<div id="hiddenDiv">
+		<%= form_tag("/courses/addTagForCourse", :method => "get") do %>
+		<%= submit_tag("Submit changes", :class=>"btn btn-success btn-lg") %>
+		<% schema_idx = 0 %>
+		<% if !@student_record.nil? %>
+		<% @student_record.each do |s| %>
+		<% if schema_idx > 1 %>
+		<!--label><%= @csv_object[0][schema_idx] %></label><br-->
+		<input id="HIDDENBTN<%= @csv_object[0][schema_idx] %>" type="text" name="data[<%= schema_idx %>]" style="display:block;"></input><br><br>
+		<!--option value="<%= @csv_object[0][schema_idx] %>"><%= @csv_object[0][schema_idx] %></option-->
+		<% end %>
+		<% schema_idx = schema_idx + 1 %>
+		<% end %>
+		<% end %>
+
+		<% end %>
+	</div>
+</body>
+</html>
+
+

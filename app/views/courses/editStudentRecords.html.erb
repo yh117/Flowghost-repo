@@ -1,0 +1,12 @@
+<h1>This is an edit page</h1>
+<hr>
+
+<%= form_tag("/courses/submitStudentRecord", :method => "get") do %>
+	<% schema_idx = 0 %>
+	<% @student_record.each do |s| %>
+  		<label><%= @csv_object[0][schema_idx] %></label><br>
+  		<input id="<%= @csv_object[0][schema_idx] %>" type="text" name="data[<%= schema_idx %>]" value="<%= s %>"></input><br><br>
+	<% schema_idx = schema_idx + 1 %>
+	<% end %>
+	<%= submit_tag("Submit changes") %>
+<% end %>

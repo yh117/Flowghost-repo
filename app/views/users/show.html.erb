@@ -1,0 +1,19 @@
+
+
+
+
+<!-- IMPORTANT: THIS FILE IS NOT BEING USED OR UP-TO-DATE!!!!!!! -->
+
+<h2>Profile</h2>
+
+<h3>
+  <strong>Name:</strong>
+  <%= @student_user.user.name %>
+</h3>
+
+<h3>
+  <strong>Email:</strong>
+  <%= @student_user.user.email %>
+</h3>
+
+<p> <%= link_to 'Edit', edit_user_path(@student_user.user), {:class=>"btn btn-large btn-link"}  %> | <%= link_to 'Add Course', new_course_path, {:class=>"btn btn-large btn-link"} %></p>

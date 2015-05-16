@@ -1,0 +1,17 @@
+<% if flash[:notice] %>  
+ 	<div class="alert alert-danger">
+	<%=flash[:notice]%>
+	</div>
+<% end %>  
+<h2>See assignments with tags</h2>
+	 
+<form name="tags_in", id="tags_in">
+	<% @tags.each do |t| %>	
+		<%=check_box_tag(t.name) %>
+		<%=label_tag(t.name, t.name, :class=>"btn btn-default btn-sm") %>
+	<%end%>
+</form>
+	
+<br/>
+<span class="btn btn-primary text-center", onclick="updateConditionFilter()">Filter</span>
+<input class="btn btn-primary text-center" type="button" value="See all" onclick="history.go(0)">

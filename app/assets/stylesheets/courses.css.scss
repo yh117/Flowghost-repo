@@ -1,0 +1,59 @@
+// Place all the styles related to the Courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fg-centered {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+.fg-vertical-middle {
+  vertical-align: middle !important;
+}
+
+.fg-delete {
+  vertical-align: middle !important;
+  float: right;
+  display: inline;
+  color: black;
+}
+
+.fg-inline {
+  display: inline;
+}
+
+.fg-bkgd-red {
+  background-color: red !important;
+}
+
+.fg-float-right {
+  float: right;
+}
+
+.fg-display {
+  display: inline;
+  vertical-align: middle !important;
+}
+
+.fg-status-good {
+  vertical-align: middle !important;
+  text-align: center;
+  background-color: lightgreen !important;
+}
+
+.fg-status-bad {
+  vertical-align: middle !important;
+  text-align: center;
+  background-color: red !important;
+}
+
+.fg-status-neutral {
+  vertical-align: middle !important;
+  text-align: center;
+  background-color: gray !important;
+}
+
+.fg-sidenav-header {
+  vertical-align: middle !important;
+  background-color: lightgray !important;
+}
