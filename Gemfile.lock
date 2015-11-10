@@ -90,6 +90,7 @@ GEM
     omniauth-lti (0.0.2)
       ims-lti
       omniauth
+    pg (0.18.3)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -186,6 +187,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   omniauth-lti
+  pg
   rails (= 4.0.0)
   rails-erd
   rails_12factor
