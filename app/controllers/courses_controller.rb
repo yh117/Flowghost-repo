@@ -332,7 +332,8 @@ end
        logger.info "&&&&&&&&&&& courses controller: record exists!!"
 	#@student_user.student = student #DOESN'T WORK
 	#student.student_user = @user 
-	@student_user = StudentUser.find(@user[:identifiable_id])
+	@student_user = StudentUser.find_by(id: @user[:identifiable_id])
+	next if @student_user.nil?
 	@student_user.student = student
 
 	student[:student_user_id] = student.student_user[:id] #TODO 
