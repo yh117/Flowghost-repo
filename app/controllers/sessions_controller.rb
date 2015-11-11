@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_email(params[:email])  
 
-    if user.identifiable_type == params[:role] #TODO ?????
+    if user && user.identifiable_type == params[:role] #TODO ?????
 
       if user && user.authenticate(params[:password]) 
 	session[:user_id] = user.id  
